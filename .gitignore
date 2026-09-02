@@ -1,0 +1,55 @@
+# macOS and Xcode user state
+.DS_Store
+._*
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+xcuserdata/
+DerivedData/
+SourcePackages/
+*.xcresult
+*.logarchive
+*.dSYM
+*.xcarchive
+
+# Swift and local caches
+.build/
+.swiftpm/
+
+# Local builds, release candidates and installation evidence
+/build/
+/build-*/
+/dist/
+/install-backups/
+/install-receipts/
+
+# Internal planning and agent evidence (not part of the public source tree)
+/.agent-runs/
+/.superpowers/
+/docs/superpowers/
+
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+*.p12
+*.p8
+*.pem
+*.key
+*.cer
+*.crt
+*.der
+*.mobileprovision
+*.provisionprofile
+AuthKey_*.p8
+
+# Local databases and runtime state
+*.sqlite
+*.sqlite3
+*.db
+
+# Editor and temporary files
+*~
+*.swp
+*.tmp
+*.log

@@ -1,0 +1,11 @@
+{
+  "rateLimits": {
+    "planType": "business",
+    "primary": {
+      "usedPercent": 0,
+      "windowDurationMins": 10080,
+      "resetsAt": 1725000000
+    },
+    "secondary": null
+  }
+}

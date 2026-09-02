@@ -1,0 +1,61 @@
+name: Bug report
+description: Report a reproducible non-sensitive defect
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include credentials, authentication files, private prompts, Keychain data, or unredacted diagnostics. Use the private process in SECURITY.md for vulnerabilities.
+  - type: input
+    id: version
+    attributes:
+      label: App/source version
+      placeholder: "1.0 / commit SHA"
+    validations:
+      required: true
+  - type: dropdown
+    id: affected_area
+    attributes:
+      label: Affected area
+      options:
+        - Codex
+        - Claude Code
+        - Claude relay installation/removal/manual recovery
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "macOS version, Apple Silicon model, relevant app or CLI version"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Redacted reproduction steps
+      description: Use synthetic values and include the smallest reliable sequence.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, account identifiers, private prompts, local personal paths, Claude settings or recovery backups, raw provider payloads, and unredacted diagnostics.
+          required: true

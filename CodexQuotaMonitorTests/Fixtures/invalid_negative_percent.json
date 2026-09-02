@@ -1,0 +1,14 @@
+{
+  "rateLimits": {
+    "planType": "plus",
+    "primary": { "usedPercent": 10 },
+    "secondary": null
+  },
+  "rateLimitsByLimitId": {
+    "codex": {
+      "planType": "plus",
+      "primary": { "usedPercent": -1 },
+      "secondary": null
+    }
+  }
+}

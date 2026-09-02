@@ -1,0 +1,7 @@
+{
+  "rateLimits": {
+    "planType": "plus",
+    "primary": { "usedPercent": 101 },
+    "secondary": null
+  }
+}

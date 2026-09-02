@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1600"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "NO"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "000000000000000000000012"
+               BuildableName = "CodexQuotaMonitor.app"
+               BlueprintName = "CodexQuotaMonitor"
+               ReferencedContainer = "container:CodexQuotaMonitor.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "000000000000000000000013"
+               BuildableName = "CodexQuotaMonitorTests.xctest"
+               BlueprintName = "CodexQuotaMonitorTests"
+               ReferencedContainer = "container:CodexQuotaMonitor.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A30000000000000000000002"
+               BuildableName = "CodexQuotaMonitorUITests.xctest"
+               BlueprintName = "CodexQuotaMonitorUITests"
+               ReferencedContainer = "container:CodexQuotaMonitor.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Validate isolated GUI runner"
+               scriptText = "set -eu&#10;case &quot;${CQM_UI_RUNNER_KIND:-}&quot; in&#10;    macos-vm|dedicated-mac)&#10;        ;;&#10;    *)&#10;        printf &apos;[ISOLATED SCHEME FAIL] trusted local runner kind is required\n&apos; &gt;&amp;2&#10;        exit 1&#10;        ;;&#10;esac&#10;if [ -z &quot;${SRCROOT:-}&quot; ]; then&#10;    printf &apos;[ISOLATED SCHEME FAIL] SRCROOT is unavailable\n&apos; &gt;&amp;2&#10;    exit 1&#10;fi&#10;/bin/bash &quot;$SRCROOT/scripts/ui_test_isolation_guard.sh&quot; &quot;$CQM_UI_RUNNER_KIND&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "000000000000000000000012"
+                     BuildableName = "CodexQuotaMonitor.app"
+                     BlueprintName = "CodexQuotaMonitor"
+                     ReferencedContainer = "container:CodexQuotaMonitor.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "000000000000000000000013"
+               BuildableName = "CodexQuotaMonitorTests.xctest"
+               BlueprintName = "CodexQuotaMonitorTests"
+               ReferencedContainer = "container:CodexQuotaMonitor.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A30000000000000000000002"
+               BuildableName = "CodexQuotaMonitorUITests.xctest"
+               BlueprintName = "CodexQuotaMonitorUITests"
+               ReferencedContainer = "container:CodexQuotaMonitor.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <AnalyzeAction buildConfiguration = "Debug">
+   </AnalyzeAction>
+</Scheme>

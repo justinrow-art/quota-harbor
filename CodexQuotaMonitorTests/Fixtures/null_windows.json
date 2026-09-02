@@ -1,0 +1,8 @@
+{
+  "rateLimits": {
+    "planType": null,
+    "primary": null,
+    "secondary": null
+  },
+  "rateLimitsByLimitId": null
+}

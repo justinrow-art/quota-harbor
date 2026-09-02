@@ -1,0 +1,1168 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000000001 /* CodexQuotaMonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000003 /* CodexQuotaMonitorApp.swift */; };
+		200000000000000000000001 /* NormalizedQuotaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000101 /* NormalizedQuotaTests.swift */; };
+		200000000000000000000002 /* codex_bucket_priority.json in Resources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000102 /* codex_bucket_priority.json */; };
+		200000000000000000000003 /* legacy_fallback.json in Resources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000103 /* legacy_fallback.json */; };
+		200000000000000000000004 /* null_windows.json in Resources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000104 /* null_windows.json */; };
+		200000000000000000000005 /* invalid_negative_percent.json in Resources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000105 /* invalid_negative_percent.json */; };
+		200000000000000000000006 /* invalid_over_percent.json in Resources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000106 /* invalid_over_percent.json */; };
+		200000000000000000000007 /* unknown_360_window.json in Resources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000107 /* unknown_360_window.json */; };
+		200000000000000000000008 /* optional_reset_time.json in Resources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000108 /* optional_reset_time.json */; };
+		200000000000000000000009 /* unknown_plan_extra_keys.json in Resources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000109 /* unknown_plan_extra_keys.json */; };
+		20000000000000000000000A /* epoch_conversion.json in Resources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000010A /* epoch_conversion.json */; };
+		20000000000000000000000B /* NormalizedQuota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000010B /* NormalizedQuota.swift */; };
+		20000000000000000000000C /* QuotaLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000010C /* QuotaLoading.swift */; };
+		20000000000000000000000D /* CodexRPCClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000010D /* CodexRPCClientTests.swift */; };
+		20000000000000000000000E /* CodexRPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000010E /* CodexRPCClient.swift */; };
+		300000000000000000000001 /* CodexBinaryLocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300000000000000000000101 /* CodexBinaryLocatorTests.swift */; };
+		300000000000000000000002 /* CodexBinaryLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300000000000000000000102 /* CodexBinaryLocator.swift */; };
+		300000000000000000000003 /* AppServerProcessTransportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300000000000000000000103 /* AppServerProcessTransportTests.swift */; };
+		300000000000000000000004 /* AppServerProcessTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300000000000000000000104 /* AppServerProcessTransport.swift */; };
+		300000000000000000000005 /* AppServerQuotaLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300000000000000000000105 /* AppServerQuotaLoaderTests.swift */; };
+		300000000000000000000006 /* AppServerQuotaLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300000000000000000000106 /* AppServerQuotaLoader.swift */; };
+		400000000000000000000001 /* QuotaViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400000000000000000000101 /* QuotaViewModelTests.swift */; };
+		400000000000000000000002 /* QuotaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400000000000000000000102 /* QuotaViewModel.swift */; };
+		400000000000000000000003 /* FloatingPanelModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400000000000000000000103 /* FloatingPanelModelTests.swift */; };
+		400000000000000000000004 /* FloatingPanelModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400000000000000000000104 /* FloatingPanelModels.swift */; };
+		400000000000000000000005 /* DebugFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400000000000000000000105 /* DebugFixtures.swift */; };
+		400000000000000000000006 /* OrbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400000000000000000000106 /* OrbView.swift */; };
+		400000000000000000000007 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400000000000000000000107 /* CardView.swift */; };
+		400000000000000000000008 /* FloatingPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400000000000000000000108 /* FloatingPanelController.swift */; };
+		400000000000000000000009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400000000000000000000109 /* AppDelegate.swift */; };
+		500000000000000000000001 /* RateLimitCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500000000000000000000101 /* RateLimitCatalogTests.swift */; };
+		500000000000000000000002 /* rate_limit_catalog_full.json in Resources */ = {isa = PBXBuildFile; fileRef = 500000000000000000000102 /* rate_limit_catalog_full.json */; };
+		500000000000000000000003 /* RateLimitCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500000000000000000000103 /* RateLimitCatalog.swift */; };
+		600000000000000000000001 /* TokenActivityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000101 /* TokenActivityTests.swift */; };
+		600000000000000000000002 /* token_usage_omitted.json in Resources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000102 /* token_usage_omitted.json */; };
+		600000000000000000000003 /* token_usage_null.json in Resources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000103 /* token_usage_null.json */; };
+		600000000000000000000004 /* token_usage_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000104 /* token_usage_empty.json */; };
+		600000000000000000000005 /* token_usage_full.json in Resources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000105 /* token_usage_full.json */; };
+		600000000000000000000006 /* token_usage_anomalies.json in Resources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000106 /* token_usage_anomalies.json */; };
+		600000000000000000000007 /* TokenActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000107 /* TokenActivity.swift */; };
+		700000000000000000000001 /* CapabilityStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700000000000000000000101 /* CapabilityStateTests.swift */; };
+		700000000000000000000002 /* CapabilityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700000000000000000000102 /* CapabilityState.swift */; };
+		800000000000000000000001 /* CodexExecutableVerifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800000000000000000000101 /* CodexExecutableVerifierTests.swift */; };
+		800000000000000000000002 /* CodexTrustManifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 800000000000000000000102 /* CodexTrustManifest.json */; };
+		800000000000000000000003 /* CodexExecutableVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800000000000000000000103 /* CodexExecutableVerifier.swift */; };
+		900000000000000000000001 /* CodexAppServerClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900000000000000000000101 /* CodexAppServerClientTests.swift */; };
+		900000000000000000000002 /* CodexAppServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900000000000000000000102 /* CodexAppServerClient.swift */; };
+		A00000000000000000000001 /* RefreshCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000101 /* RefreshCoordinatorTests.swift */; };
+		A00000000000000000000002 /* RefreshCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000102 /* RefreshCoordinator.swift */; };
+		B00000000000000000000001 /* QuotaStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000101 /* QuotaStoreTests.swift */; };
+		B00000000000000000000002 /* QuotaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000102 /* QuotaStore.swift */; };
+		C00000000000000000000001 /* SettingsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000101 /* SettingsStoreTests.swift */; };
+		C00000000000000000000002 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000102 /* AppSettings.swift */; };
+		C00000000000000000000003 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000103 /* SettingsStore.swift */; };
+		C00000000000000000000004 /* StatusItemPresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000104 /* StatusItemPresentationTests.swift */; };
+		C00000000000000000000005 /* StatusItemPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000105 /* StatusItemPresentation.swift */; };
+		D00000000000000000000001 /* StatusItemControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00000000000000000000101 /* StatusItemControllerTests.swift */; };
+		D00000000000000000000002 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00000000000000000000102 /* StatusItemController.swift */; };
+		E00000000000000000000001 /* SpacePolicyPresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00000000000000000000101 /* SpacePolicyPresentationTests.swift */; };
+		F10000000000000000000001 /* AppLifecycleCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000101 /* AppLifecycleCoordinatorTests.swift */; };
+		F20000000000000000000001 /* AppLifecycleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000101 /* AppLifecycleCoordinator.swift */; };
+		F20000000000000000000002 /* SessionLifecycleMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000102 /* SessionLifecycleMonitor.swift */; };
+		G10000000000000000000001 /* LoginItemServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = G10000000000000000000101 /* LoginItemServiceTests.swift */; };
+		G10000000000000000000002 /* OnboardingControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = G10000000000000000000102 /* OnboardingControllerTests.swift */; };
+		G10000000000000000000003 /* AppOnboardingLifecycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = G10000000000000000000103 /* AppOnboardingLifecycleTests.swift */; };
+		G20000000000000000000001 /* LoginItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = G20000000000000000000101 /* LoginItemService.swift */; };
+		G20000000000000000000002 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = G20000000000000000000102 /* OnboardingController.swift */; };
+		G20000000000000000000003 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = G20000000000000000000103 /* OnboardingView.swift */; };
+		G20000000000000000000004 /* OnboardingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = G20000000000000000000104 /* OnboardingWindowController.swift */; };
+		H10000000000000000000001 /* SettingsPresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = H10000000000000000000101 /* SettingsPresentationTests.swift */; };
+		I10000000000000000000001 /* DebugUITestRuntimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = I10000000000000000000101 /* DebugUITestRuntimeTests.swift */; };
+		T10000000000000000000001 /* BuiltInThemeContractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = T10000000000000000000101 /* BuiltInThemeContractTests.swift */; };
+		T20000000000000000000001 /* ThemeSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = T20000000000000000000101 /* ThemeSchema.swift */; };
+		T20000000000000000000002 /* BuiltInThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = T20000000000000000000102 /* BuiltInThemes.swift */; };
+		T30000000000000000000001 /* ThemeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = T30000000000000000000101 /* ThemeValidator.swift */; };
+		T30000000000000000000002 /* ThemeViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = T30000000000000000000102 /* ThemeViewSupport.swift */; };
+		T30000000000000000000003 /* ThemeValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = T30000000000000000000103 /* ThemeValidatorTests.swift */; };
+		T40000000000000000000001 /* ThemePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = T40000000000000000000101 /* ThemePreviewView.swift */; };
+		T40000000000000000000002 /* ThemeViewIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = T40000000000000000000102 /* ThemeViewIntegrationTests.swift */; };
+		T50000000000000000000001 /* ThemeRasterProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = T50000000000000000000101 /* ThemeRasterProcessor.swift */; };
+		T50000000000000000000002 /* ThemeRasterProcessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = T50000000000000000000102 /* ThemeRasterProcessorTests.swift */; };
+		T60000000000000000000001 /* ThemeEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = T60000000000000000000101 /* ThemeEditorViewModel.swift */; };
+		T60000000000000000000002 /* CustomThemeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = T60000000000000000000102 /* CustomThemeEditorView.swift */; };
+		T60000000000000000000003 /* ThemeEditorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = T60000000000000000000103 /* ThemeEditorViewModelTests.swift */; };
+		T70000000000000000000001 /* ThemeImportExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = T70000000000000000000101 /* ThemeImportExportService.swift */; };
+		T70000000000000000000002 /* ThemeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = T70000000000000000000102 /* ThemeStore.swift */; };
+		T70000000000000000000003 /* ThemeImportSecurityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = T70000000000000000000103 /* ThemeImportSecurityTests.swift */; };
+		T70000000000000000000004 /* ThemeStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = T70000000000000000000104 /* ThemeStoreTests.swift */; };
+		T80000000000000000000001 /* AccessibilitySemanticTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = T80000000000000000000101 /* AccessibilitySemanticTranscript.swift */; };
+		T80000000000000000000002 /* AccessibilityContractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = T80000000000000000000102 /* AccessibilityContractTests.swift */; };
+		T90000000000000000000001 /* LocalizedPresenters.swift in Sources */ = {isa = PBXBuildFile; fileRef = T90000000000000000000101 /* LocalizedPresenters.swift */; };
+		T90000000000000000000002 /* LocalizationCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = T90000000000000000000102 /* LocalizationCatalogTests.swift */; };
+		T90000000000000000000003 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = T90000000000000000000103 /* Localizable.xcstrings */; };
+		TA0000000000000000000001 /* ProductionThemeRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = TA0000000000000000000101 /* ProductionThemeRuntime.swift */; };
+		TA0000000000000000000002 /* ProductionThemeRuntimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = TA0000000000000000000102 /* ProductionThemeRuntimeTests.swift */; };
+		TB0000000000000000000001 /* ThemeEditorProductionSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = TB0000000000000000000101 /* ThemeEditorProductionSession.swift */; };
+		TB0000000000000000000002 /* ThemeEditorProductionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = TB0000000000000000000102 /* ThemeEditorProductionTests.swift */; };
+		TB0000000000000000000003 /* ThemeEditorPanels.swift in Sources */ = {isa = PBXBuildFile; fileRef = TB0000000000000000000103 /* ThemeEditorPanels.swift */; };
+		TB0000000000000000000004 /* ThemeEditorWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = TB0000000000000000000104 /* ThemeEditorWindowController.swift */; };
+		TC0000000000000000000001 /* BuiltInThemeArtworkLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = TC0000000000000000000101 /* BuiltInThemeArtworkLoaderTests.swift */; };
+		TC0000000000000000000002 /* BuiltInThemeArtworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = TC0000000000000000000102 /* BuiltInThemeArtworkLoader.swift */; };
+		TD0000000000000000000001 /* theme-morandi-background.png in Resources */ = {isa = PBXBuildFile; fileRef = TD0000000000000000000101 /* theme-morandi-background.png */; };
+		TD0000000000000000000002 /* theme-cyberpunk-background.png in Resources */ = {isa = PBXBuildFile; fileRef = TD0000000000000000000102 /* theme-cyberpunk-background.png */; };
+		TD0000000000000000000003 /* theme-warm-hand-drawn-background.png in Resources */ = {isa = PBXBuildFile; fileRef = TD0000000000000000000103 /* theme-warm-hand-drawn-background.png */; };
+		TD0000000000000000000004 /* theme-glass-background.png in Resources */ = {isa = PBXBuildFile; fileRef = TD0000000000000000000104 /* theme-glass-background.png */; };
+		TD0000000000000000000005 /* theme-sketch-background.png in Resources */ = {isa = PBXBuildFile; fileRef = TD0000000000000000000105 /* theme-sketch-background.png */; };
+		TD0000000000000000000006 /* theme-cartoon-illustration-background.png in Resources */ = {isa = PBXBuildFile; fileRef = TD0000000000000000000106 /* theme-cartoon-illustration-background.png */; };
+		TE0000000000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = TE0000000000000000000101 /* Assets.xcassets */; };
+		I20000000000000000000001 /* DebugUITestRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = I20000000000000000000101 /* DebugUITestRuntime.swift */; };
+		I20000000000000000000002 /* DebugUITestControlWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = I20000000000000000000102 /* DebugUITestControlWindow.swift */; };
+		A30000000000000000000005 /* CodexQuotaMonitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30000000000000000000004 /* CodexQuotaMonitorUITests.swift */; };
+		U10000000000000000000001 /* XCUIElementTextCandidatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = U10000000000000000000101 /* XCUIElementTextCandidatesTests.swift */; };
+		U10000000000000000000002 /* XCUIElementTextCandidates.swift in Sources */ = {isa = PBXBuildFile; fileRef = U10000000000000000000102 /* XCUIElementTextCandidates.swift */; };
+		U10000000000000000000003 /* XCUIElementTextCandidates.swift in Sources */ = {isa = PBXBuildFile; fileRef = U10000000000000000000102 /* XCUIElementTextCandidates.swift */; };
+		H20000000000000000000001 /* SettingsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = H20000000000000000000101 /* SettingsPresentation.swift */; };
+		H20000000000000000000002 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = H20000000000000000000102 /* SettingsViewModel.swift */; };
+		H20000000000000000000003 /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = H20000000000000000000103 /* SettingsWindowController.swift */; };
+		H20000000000000000000004 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = H20000000000000000000104 /* SettingsView.swift */; };
+		H20000000000000000000005 /* InstalledCodexVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = H20000000000000000000105 /* InstalledCodexVersionProvider.swift */; };
+		P10000000000000000000001 /* ProviderDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = P10000000000000000000101 /* ProviderDomainTests.swift */; };
+		P10000000000000000000002 /* ProviderDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = P10000000000000000000102 /* ProviderDomain.swift */; };
+		P20000000000000000000001 /* ProviderHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = P20000000000000000000101 /* ProviderHubTests.swift */; };
+		P20000000000000000000002 /* ProviderDashboardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = P20000000000000000000102 /* ProviderDashboardStore.swift */; };
+		P20000000000000000000003 /* ProviderHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = P20000000000000000000103 /* ProviderHub.swift */; };
+		P30000000000000000000001 /* CodexProviderConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = P30000000000000000000101 /* CodexProviderConnector.swift */; };
+		P40000000000000000000001 /* LocalProviderConnectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = P40000000000000000000101 /* LocalProviderConnectors.swift */; };
+		P50000000000000000000001 /* CodexProviderConnectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = P50000000000000000000101 /* CodexProviderConnectorTests.swift */; };
+		P60000000000000000000001 /* LocalProviderConnectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = P60000000000000000000101 /* LocalProviderConnectorTests.swift */; };
+		P70000000000000000000001 /* CodexProviderSnapshotMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = P70000000000000000000101 /* CodexProviderSnapshotMapper.swift */; };
+		P80000000000000000000001 /* ProviderRuntimeCompositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = P80000000000000000000101 /* ProviderRuntimeCompositionTests.swift */; };
+		P80000000000000000000002 /* ProviderRuntimeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = P80000000000000000000102 /* ProviderRuntimeCoordinator.swift */; };
+		P90000000000000000000001 /* ProviderCardPresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = P90000000000000000000101 /* ProviderCardPresentationTests.swift */; };
+		P90000000000000000000002 /* ProviderCardPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = P90000000000000000000102 /* ProviderCardPresentation.swift */; };
+		C31000000000000000000001 /* ClaudeStatusLineRelayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31000000000000000000101 /* ClaudeStatusLineRelayTests.swift */; };
+		C31000000000000000000002 /* ClaudeStatusLineRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31000000000000000000102 /* ClaudeStatusLineRelay.swift */; };
+		C32000000000000000000001 /* ClaudeAuthStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32000000000000000000101 /* ClaudeAuthStatusTests.swift */; };
+		C32000000000000000000002 /* ClaudeAuthStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32000000000000000000102 /* ClaudeAuthStatus.swift */; };
+		C34000000000000000000001 /* ClaudeRelayCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34000000000000000000101 /* ClaudeRelayCommandTests.swift */; };
+		C34000000000000000000002 /* ClaudeRelayCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34000000000000000000102 /* ClaudeRelayCommand.swift */; };
+		C35000000000000000000001 /* ClaudeStatusLineSettingsPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35000000000000000000101 /* ClaudeStatusLineSettingsPolicyTests.swift */; };
+		C35000000000000000000002 /* ClaudeStatusLineSettingsPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35000000000000000000102 /* ClaudeStatusLineSettingsPolicy.swift */; };
+		C36000000000000000000001 /* ClaudeStatusLineSettingsInstallerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36000000000000000000101 /* ClaudeStatusLineSettingsInstallerTests.swift */; };
+		C36000000000000000000002 /* ClaudeStatusLineSettingsInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36000000000000000000102 /* ClaudeStatusLineSettingsInstaller.swift */; };
+		C37000000000000000000001 /* ClaudeStatusLineSettingsPOSIXStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37000000000000000000101 /* ClaudeStatusLineSettingsPOSIXStore.swift */; };
+		C38000000000000000000001 /* ClaudeProviderConnectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38000000000000000000101 /* ClaudeProviderConnectorTests.swift */; };
+		C39000000000000000000001 /* ClaudeProviderConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39000000000000000000101 /* ClaudeProviderConnector.swift */; };
+		C3A000000000000000000001 /* ClaudeExecutableLocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A000000000000000000101 /* ClaudeExecutableLocatorTests.swift */; };
+		C3A000000000000000000002 /* ClaudeExecutableLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A000000000000000000102 /* ClaudeExecutableLocator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		000000000000000000000015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000014 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000000000000000000000012;
+			remoteInfo = CodexQuotaMonitor;
+		};
+		A30000000000000000000009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000014 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000000000000000000000012;
+			remoteInfo = CodexQuotaMonitor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		000000000000000000000003 /* CodexQuotaMonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexQuotaMonitorApp.swift; sourceTree = "<group>"; };
+		000000000000000000000005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000000000000000006 /* CodexQuotaMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodexQuotaMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000007 /* CodexQuotaMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodexQuotaMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30000000000000000000001 /* CodexQuotaMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodexQuotaMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30000000000000000000004 /* CodexQuotaMonitorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexQuotaMonitorUITests.swift; sourceTree = "<group>"; };
+		U10000000000000000000101 /* XCUIElementTextCandidatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElementTextCandidatesTests.swift; sourceTree = "<group>"; };
+		U10000000000000000000102 /* XCUIElementTextCandidates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support/XCUIElementTextCandidates.swift; sourceTree = "<group>"; };
+		P10000000000000000000101 /* ProviderDomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDomainTests.swift; sourceTree = "<group>"; };
+		P10000000000000000000102 /* ProviderDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDomain.swift; sourceTree = "<group>"; };
+		P20000000000000000000101 /* ProviderHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderHubTests.swift; sourceTree = "<group>"; };
+		P20000000000000000000102 /* ProviderDashboardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDashboardStore.swift; sourceTree = "<group>"; };
+		P20000000000000000000103 /* ProviderHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderHub.swift; sourceTree = "<group>"; };
+		P30000000000000000000101 /* CodexProviderConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexProviderConnector.swift; sourceTree = "<group>"; };
+		P40000000000000000000101 /* LocalProviderConnectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProviderConnectors.swift; sourceTree = "<group>"; };
+		P50000000000000000000101 /* CodexProviderConnectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexProviderConnectorTests.swift; sourceTree = "<group>"; };
+		P60000000000000000000101 /* LocalProviderConnectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProviderConnectorTests.swift; sourceTree = "<group>"; };
+		P70000000000000000000101 /* CodexProviderSnapshotMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexProviderSnapshotMapper.swift; sourceTree = "<group>"; };
+		P80000000000000000000101 /* ProviderRuntimeCompositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRuntimeCompositionTests.swift; sourceTree = "<group>"; };
+		P80000000000000000000102 /* ProviderRuntimeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRuntimeCoordinator.swift; sourceTree = "<group>"; };
+		P90000000000000000000101 /* ProviderCardPresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderCardPresentationTests.swift; sourceTree = "<group>"; };
+		P90000000000000000000102 /* ProviderCardPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderCardPresentation.swift; sourceTree = "<group>"; };
+		C31000000000000000000101 /* ClaudeStatusLineRelayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeStatusLineRelayTests.swift; sourceTree = "<group>"; };
+		C31000000000000000000102 /* ClaudeStatusLineRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeStatusLineRelay.swift; sourceTree = "<group>"; };
+		C32000000000000000000101 /* ClaudeAuthStatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeAuthStatusTests.swift; sourceTree = "<group>"; };
+		C32000000000000000000102 /* ClaudeAuthStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeAuthStatus.swift; sourceTree = "<group>"; };
+		C34000000000000000000101 /* ClaudeRelayCommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeRelayCommandTests.swift; sourceTree = "<group>"; };
+		C34000000000000000000102 /* ClaudeRelayCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeRelayCommand.swift; sourceTree = "<group>"; };
+		C35000000000000000000101 /* ClaudeStatusLineSettingsPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeStatusLineSettingsPolicyTests.swift; sourceTree = "<group>"; };
+		C35000000000000000000102 /* ClaudeStatusLineSettingsPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeStatusLineSettingsPolicy.swift; sourceTree = "<group>"; };
+		C36000000000000000000101 /* ClaudeStatusLineSettingsInstallerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeStatusLineSettingsInstallerTests.swift; sourceTree = "<group>"; };
+		C36000000000000000000102 /* ClaudeStatusLineSettingsInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeStatusLineSettingsInstaller.swift; sourceTree = "<group>"; };
+		C37000000000000000000101 /* ClaudeStatusLineSettingsPOSIXStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeStatusLineSettingsPOSIXStore.swift; sourceTree = "<group>"; };
+		C38000000000000000000101 /* ClaudeProviderConnectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeProviderConnectorTests.swift; sourceTree = "<group>"; };
+		C39000000000000000000101 /* ClaudeProviderConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeProviderConnector.swift; sourceTree = "<group>"; };
+		C3A000000000000000000101 /* ClaudeExecutableLocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeExecutableLocatorTests.swift; sourceTree = "<group>"; };
+		C3A000000000000000000102 /* ClaudeExecutableLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeExecutableLocator.swift; sourceTree = "<group>"; };
+		200000000000000000000101 /* NormalizedQuotaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizedQuotaTests.swift; sourceTree = "<group>"; };
+		200000000000000000000102 /* codex_bucket_priority.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = codex_bucket_priority.json; sourceTree = "<group>"; };
+		200000000000000000000103 /* legacy_fallback.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = legacy_fallback.json; sourceTree = "<group>"; };
+		200000000000000000000104 /* null_windows.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = null_windows.json; sourceTree = "<group>"; };
+		200000000000000000000105 /* invalid_negative_percent.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = invalid_negative_percent.json; sourceTree = "<group>"; };
+		200000000000000000000106 /* invalid_over_percent.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = invalid_over_percent.json; sourceTree = "<group>"; };
+		200000000000000000000107 /* unknown_360_window.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = unknown_360_window.json; sourceTree = "<group>"; };
+		200000000000000000000108 /* optional_reset_time.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = optional_reset_time.json; sourceTree = "<group>"; };
+		200000000000000000000109 /* unknown_plan_extra_keys.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = unknown_plan_extra_keys.json; sourceTree = "<group>"; };
+		20000000000000000000010A /* epoch_conversion.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = epoch_conversion.json; sourceTree = "<group>"; };
+		20000000000000000000010B /* NormalizedQuota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizedQuota.swift; sourceTree = "<group>"; };
+		20000000000000000000010C /* QuotaLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotaLoading.swift; sourceTree = "<group>"; };
+		20000000000000000000010D /* CodexRPCClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexRPCClientTests.swift; sourceTree = "<group>"; };
+		20000000000000000000010E /* CodexRPCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexRPCClient.swift; sourceTree = "<group>"; };
+		300000000000000000000101 /* CodexBinaryLocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexBinaryLocatorTests.swift; sourceTree = "<group>"; };
+		300000000000000000000102 /* CodexBinaryLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexBinaryLocator.swift; sourceTree = "<group>"; };
+		300000000000000000000103 /* AppServerProcessTransportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerProcessTransportTests.swift; sourceTree = "<group>"; };
+		300000000000000000000104 /* AppServerProcessTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerProcessTransport.swift; sourceTree = "<group>"; };
+		300000000000000000000105 /* AppServerQuotaLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerQuotaLoaderTests.swift; sourceTree = "<group>"; };
+		300000000000000000000106 /* AppServerQuotaLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerQuotaLoader.swift; sourceTree = "<group>"; };
+		400000000000000000000101 /* QuotaViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotaViewModelTests.swift; sourceTree = "<group>"; };
+		400000000000000000000102 /* QuotaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotaViewModel.swift; sourceTree = "<group>"; };
+		400000000000000000000103 /* FloatingPanelModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelModelTests.swift; sourceTree = "<group>"; };
+		400000000000000000000104 /* FloatingPanelModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelModels.swift; sourceTree = "<group>"; };
+		400000000000000000000105 /* DebugFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFixtures.swift; sourceTree = "<group>"; };
+		400000000000000000000106 /* OrbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbView.swift; sourceTree = "<group>"; };
+		400000000000000000000107 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		400000000000000000000108 /* FloatingPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelController.swift; sourceTree = "<group>"; };
+		400000000000000000000109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		500000000000000000000101 /* RateLimitCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateLimitCatalogTests.swift; sourceTree = "<group>"; };
+		500000000000000000000102 /* rate_limit_catalog_full.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rate_limit_catalog_full.json; sourceTree = "<group>"; };
+		500000000000000000000103 /* RateLimitCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateLimitCatalog.swift; sourceTree = "<group>"; };
+		600000000000000000000101 /* TokenActivityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenActivityTests.swift; sourceTree = "<group>"; };
+		600000000000000000000102 /* token_usage_omitted.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = token_usage_omitted.json; sourceTree = "<group>"; };
+		600000000000000000000103 /* token_usage_null.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = token_usage_null.json; sourceTree = "<group>"; };
+		600000000000000000000104 /* token_usage_empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = token_usage_empty.json; sourceTree = "<group>"; };
+		600000000000000000000105 /* token_usage_full.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = token_usage_full.json; sourceTree = "<group>"; };
+		600000000000000000000106 /* token_usage_anomalies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = token_usage_anomalies.json; sourceTree = "<group>"; };
+		600000000000000000000107 /* TokenActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenActivity.swift; sourceTree = "<group>"; };
+		700000000000000000000101 /* CapabilityStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapabilityStateTests.swift; sourceTree = "<group>"; };
+		700000000000000000000102 /* CapabilityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapabilityState.swift; sourceTree = "<group>"; };
+		800000000000000000000101 /* CodexExecutableVerifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexExecutableVerifierTests.swift; sourceTree = "<group>"; };
+		800000000000000000000102 /* CodexTrustManifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CodexTrustManifest.json; sourceTree = "<group>"; };
+		800000000000000000000103 /* CodexExecutableVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexExecutableVerifier.swift; sourceTree = "<group>"; };
+		900000000000000000000101 /* CodexAppServerClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexAppServerClientTests.swift; sourceTree = "<group>"; };
+		900000000000000000000102 /* CodexAppServerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexAppServerClient.swift; sourceTree = "<group>"; };
+		A00000000000000000000101 /* RefreshCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshCoordinatorTests.swift; sourceTree = "<group>"; };
+		A00000000000000000000102 /* RefreshCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshCoordinator.swift; sourceTree = "<group>"; };
+		B00000000000000000000101 /* QuotaStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotaStoreTests.swift; sourceTree = "<group>"; };
+		B00000000000000000000102 /* QuotaStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotaStore.swift; sourceTree = "<group>"; };
+		C00000000000000000000101 /* SettingsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoreTests.swift; sourceTree = "<group>"; };
+		C00000000000000000000102 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		C00000000000000000000103 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		C00000000000000000000104 /* StatusItemPresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemPresentationTests.swift; sourceTree = "<group>"; };
+		C00000000000000000000105 /* StatusItemPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemPresentation.swift; sourceTree = "<group>"; };
+		D00000000000000000000101 /* StatusItemControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemControllerTests.swift; sourceTree = "<group>"; };
+		D00000000000000000000102 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		E00000000000000000000101 /* SpacePolicyPresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacePolicyPresentationTests.swift; sourceTree = "<group>"; };
+		F10000000000000000000101 /* AppLifecycleCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifecycleCoordinatorTests.swift; sourceTree = "<group>"; };
+		F20000000000000000000101 /* AppLifecycleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifecycleCoordinator.swift; sourceTree = "<group>"; };
+		F20000000000000000000102 /* SessionLifecycleMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionLifecycleMonitor.swift; sourceTree = "<group>"; };
+		G10000000000000000000101 /* LoginItemServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItemServiceTests.swift; sourceTree = "<group>"; };
+		G10000000000000000000102 /* OnboardingControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingControllerTests.swift; sourceTree = "<group>"; };
+		G10000000000000000000103 /* AppOnboardingLifecycleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOnboardingLifecycleTests.swift; sourceTree = "<group>"; };
+		G20000000000000000000101 /* LoginItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItemService.swift; sourceTree = "<group>"; };
+		G20000000000000000000102 /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
+		G20000000000000000000103 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		G20000000000000000000104 /* OnboardingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWindowController.swift; sourceTree = "<group>"; };
+		H10000000000000000000101 /* SettingsPresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresentationTests.swift; sourceTree = "<group>"; };
+		I10000000000000000000101 /* DebugUITestRuntimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugUITestRuntimeTests.swift; sourceTree = "<group>"; };
+		T10000000000000000000101 /* BuiltInThemeContractTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuiltInThemeContractTests.swift; sourceTree = "<group>"; };
+		T20000000000000000000101 /* ThemeSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSchema.swift; sourceTree = "<group>"; };
+		T20000000000000000000102 /* BuiltInThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuiltInThemes.swift; sourceTree = "<group>"; };
+		T30000000000000000000101 /* ThemeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeValidator.swift; sourceTree = "<group>"; };
+		T30000000000000000000102 /* ThemeViewSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewSupport.swift; sourceTree = "<group>"; };
+		T30000000000000000000103 /* ThemeValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeValidatorTests.swift; sourceTree = "<group>"; };
+		T40000000000000000000101 /* ThemePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePreviewView.swift; sourceTree = "<group>"; };
+		T40000000000000000000102 /* ThemeViewIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewIntegrationTests.swift; sourceTree = "<group>"; };
+		T50000000000000000000101 /* ThemeRasterProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeRasterProcessor.swift; sourceTree = "<group>"; };
+		T50000000000000000000102 /* ThemeRasterProcessorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeRasterProcessorTests.swift; sourceTree = "<group>"; };
+		T60000000000000000000101 /* ThemeEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEditorViewModel.swift; sourceTree = "<group>"; };
+		T60000000000000000000102 /* CustomThemeEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeEditorView.swift; sourceTree = "<group>"; };
+		T60000000000000000000103 /* ThemeEditorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEditorViewModelTests.swift; sourceTree = "<group>"; };
+		T70000000000000000000101 /* ThemeImportExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeImportExportService.swift; sourceTree = "<group>"; };
+		T70000000000000000000102 /* ThemeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeStore.swift; sourceTree = "<group>"; };
+		T70000000000000000000103 /* ThemeImportSecurityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeImportSecurityTests.swift; sourceTree = "<group>"; };
+		T70000000000000000000104 /* ThemeStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeStoreTests.swift; sourceTree = "<group>"; };
+		T80000000000000000000101 /* AccessibilitySemanticTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilitySemanticTranscript.swift; sourceTree = "<group>"; };
+		T80000000000000000000102 /* AccessibilityContractTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityContractTests.swift; sourceTree = "<group>"; };
+		T90000000000000000000101 /* LocalizedPresenters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedPresenters.swift; sourceTree = "<group>"; };
+		T90000000000000000000102 /* LocalizationCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationCatalogTests.swift; sourceTree = "<group>"; };
+		T90000000000000000000103 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		TA0000000000000000000101 /* ProductionThemeRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionThemeRuntime.swift; sourceTree = "<group>"; };
+		TA0000000000000000000102 /* ProductionThemeRuntimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionThemeRuntimeTests.swift; sourceTree = "<group>"; };
+		TB0000000000000000000101 /* ThemeEditorProductionSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEditorProductionSession.swift; sourceTree = "<group>"; };
+		TB0000000000000000000102 /* ThemeEditorProductionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEditorProductionTests.swift; sourceTree = "<group>"; };
+		TB0000000000000000000103 /* ThemeEditorPanels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEditorPanels.swift; sourceTree = "<group>"; };
+		TB0000000000000000000104 /* ThemeEditorWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEditorWindowController.swift; sourceTree = "<group>"; };
+		TC0000000000000000000101 /* BuiltInThemeArtworkLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuiltInThemeArtworkLoaderTests.swift; sourceTree = "<group>"; };
+		TC0000000000000000000102 /* BuiltInThemeArtworkLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuiltInThemeArtworkLoader.swift; sourceTree = "<group>"; };
+		TD0000000000000000000101 /* theme-morandi-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-morandi-background.png"; sourceTree = "<group>"; };
+		TD0000000000000000000102 /* theme-cyberpunk-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-cyberpunk-background.png"; sourceTree = "<group>"; };
+		TD0000000000000000000103 /* theme-warm-hand-drawn-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-warm-hand-drawn-background.png"; sourceTree = "<group>"; };
+		TD0000000000000000000104 /* theme-glass-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-glass-background.png"; sourceTree = "<group>"; };
+		TD0000000000000000000105 /* theme-sketch-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-sketch-background.png"; sourceTree = "<group>"; };
+		TD0000000000000000000106 /* theme-cartoon-illustration-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme-cartoon-illustration-background.png"; sourceTree = "<group>"; };
+		TE0000000000000000000101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		I20000000000000000000101 /* DebugUITestRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugUITestRuntime.swift; sourceTree = "<group>"; };
+		I20000000000000000000102 /* DebugUITestControlWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugUITestControlWindow.swift; sourceTree = "<group>"; };
+		H20000000000000000000101 /* SettingsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresentation.swift; sourceTree = "<group>"; };
+		H20000000000000000000102 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		H20000000000000000000103 /* SettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
+		H20000000000000000000104 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		H20000000000000000000105 /* InstalledCodexVersionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstalledCodexVersionProvider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000000000000000000008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30000000000000000000006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00000000000000000000000E /* CodexQuotaMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000003 /* CodexQuotaMonitorApp.swift */,
+				400000000000000000000109 /* AppDelegate.swift */,
+				800000000000000000000102 /* CodexTrustManifest.json */,
+				200000000000000000000202 /* Core */,
+				400000000000000000000202 /* Model */,
+				C00000000000000000000201 /* Settings */,
+				F20000000000000000000201 /* Lifecycle */,
+				T20000000000000000000201 /* Theme */,
+				T80000000000000000000201 /* Accessibility */,
+				T90000000000000000000201 /* Localization */,
+				T90000000000000000000202 /* Resources */,
+				400000000000000000000203 /* UI */,
+				000000000000000000000005 /* Info.plist */,
+			);
+			path = CodexQuotaMonitor;
+			sourceTree = "<group>";
+		};
+		00000000000000000000000F /* CodexQuotaMonitorTests */ = {
+			isa = PBXGroup;
+			children = (
+				P10000000000000000000101 /* ProviderDomainTests.swift */,
+				P20000000000000000000101 /* ProviderHubTests.swift */,
+				P50000000000000000000101 /* CodexProviderConnectorTests.swift */,
+				P60000000000000000000101 /* LocalProviderConnectorTests.swift */,
+				P80000000000000000000101 /* ProviderRuntimeCompositionTests.swift */,
+				P90000000000000000000101 /* ProviderCardPresentationTests.swift */,
+				C31000000000000000000101 /* ClaudeStatusLineRelayTests.swift */,
+				C32000000000000000000101 /* ClaudeAuthStatusTests.swift */,
+				C34000000000000000000101 /* ClaudeRelayCommandTests.swift */,
+				C35000000000000000000101 /* ClaudeStatusLineSettingsPolicyTests.swift */,
+				C36000000000000000000101 /* ClaudeStatusLineSettingsInstallerTests.swift */,
+				C38000000000000000000101 /* ClaudeProviderConnectorTests.swift */,
+				C3A000000000000000000101 /* ClaudeExecutableLocatorTests.swift */,
+				200000000000000000000101 /* NormalizedQuotaTests.swift */,
+				20000000000000000000010D /* CodexRPCClientTests.swift */,
+				300000000000000000000101 /* CodexBinaryLocatorTests.swift */,
+				300000000000000000000103 /* AppServerProcessTransportTests.swift */,
+				300000000000000000000105 /* AppServerQuotaLoaderTests.swift */,
+				400000000000000000000101 /* QuotaViewModelTests.swift */,
+				400000000000000000000103 /* FloatingPanelModelTests.swift */,
+				500000000000000000000101 /* RateLimitCatalogTests.swift */,
+				600000000000000000000101 /* TokenActivityTests.swift */,
+				700000000000000000000101 /* CapabilityStateTests.swift */,
+				800000000000000000000101 /* CodexExecutableVerifierTests.swift */,
+				900000000000000000000101 /* CodexAppServerClientTests.swift */,
+				A00000000000000000000101 /* RefreshCoordinatorTests.swift */,
+				B00000000000000000000101 /* QuotaStoreTests.swift */,
+				C00000000000000000000101 /* SettingsStoreTests.swift */,
+				C00000000000000000000104 /* StatusItemPresentationTests.swift */,
+				D00000000000000000000101 /* StatusItemControllerTests.swift */,
+				E00000000000000000000101 /* SpacePolicyPresentationTests.swift */,
+				F10000000000000000000101 /* AppLifecycleCoordinatorTests.swift */,
+				G10000000000000000000101 /* LoginItemServiceTests.swift */,
+				G10000000000000000000102 /* OnboardingControllerTests.swift */,
+				G10000000000000000000103 /* AppOnboardingLifecycleTests.swift */,
+				H10000000000000000000101 /* SettingsPresentationTests.swift */,
+				I10000000000000000000101 /* DebugUITestRuntimeTests.swift */,
+				T10000000000000000000101 /* BuiltInThemeContractTests.swift */,
+				T30000000000000000000103 /* ThemeValidatorTests.swift */,
+				T40000000000000000000102 /* ThemeViewIntegrationTests.swift */,
+				T50000000000000000000102 /* ThemeRasterProcessorTests.swift */,
+				T60000000000000000000103 /* ThemeEditorViewModelTests.swift */,
+				T70000000000000000000103 /* ThemeImportSecurityTests.swift */,
+				T70000000000000000000104 /* ThemeStoreTests.swift */,
+				T80000000000000000000102 /* AccessibilityContractTests.swift */,
+				U10000000000000000000102 /* XCUIElementTextCandidates.swift */,
+				U10000000000000000000101 /* XCUIElementTextCandidatesTests.swift */,
+				T90000000000000000000102 /* LocalizationCatalogTests.swift */,
+				TA0000000000000000000102 /* ProductionThemeRuntimeTests.swift */,
+				TB0000000000000000000102 /* ThemeEditorProductionTests.swift */,
+				TC0000000000000000000101 /* BuiltInThemeArtworkLoaderTests.swift */,
+				200000000000000000000201 /* Fixtures */,
+			);
+			path = CodexQuotaMonitorTests;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000003 /* CodexQuotaMonitorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A30000000000000000000004 /* CodexQuotaMonitorUITests.swift */,
+			);
+			path = CodexQuotaMonitorUITests;
+			sourceTree = "<group>";
+		};
+		200000000000000000000201 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000102 /* codex_bucket_priority.json */,
+				200000000000000000000103 /* legacy_fallback.json */,
+				200000000000000000000104 /* null_windows.json */,
+				200000000000000000000105 /* invalid_negative_percent.json */,
+				200000000000000000000106 /* invalid_over_percent.json */,
+				200000000000000000000107 /* unknown_360_window.json */,
+				200000000000000000000108 /* optional_reset_time.json */,
+				200000000000000000000109 /* unknown_plan_extra_keys.json */,
+				20000000000000000000010A /* epoch_conversion.json */,
+				500000000000000000000102 /* rate_limit_catalog_full.json */,
+				600000000000000000000102 /* token_usage_omitted.json */,
+				600000000000000000000103 /* token_usage_null.json */,
+				600000000000000000000104 /* token_usage_empty.json */,
+				600000000000000000000105 /* token_usage_full.json */,
+				600000000000000000000106 /* token_usage_anomalies.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		200000000000000000000202 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				P10000000000000000000102 /* ProviderDomain.swift */,
+				C31000000000000000000102 /* ClaudeStatusLineRelay.swift */,
+				C32000000000000000000102 /* ClaudeAuthStatus.swift */,
+				C34000000000000000000102 /* ClaudeRelayCommand.swift */,
+				C35000000000000000000102 /* ClaudeStatusLineSettingsPolicy.swift */,
+				C36000000000000000000102 /* ClaudeStatusLineSettingsInstaller.swift */,
+				C37000000000000000000101 /* ClaudeStatusLineSettingsPOSIXStore.swift */,
+				C3A000000000000000000102 /* ClaudeExecutableLocator.swift */,
+				20000000000000000000010B /* NormalizedQuota.swift */,
+				20000000000000000000010C /* QuotaLoading.swift */,
+				20000000000000000000010E /* CodexRPCClient.swift */,
+				300000000000000000000102 /* CodexBinaryLocator.swift */,
+				300000000000000000000104 /* AppServerProcessTransport.swift */,
+				300000000000000000000106 /* AppServerQuotaLoader.swift */,
+				500000000000000000000103 /* RateLimitCatalog.swift */,
+				600000000000000000000107 /* TokenActivity.swift */,
+				700000000000000000000102 /* CapabilityState.swift */,
+				800000000000000000000103 /* CodexExecutableVerifier.swift */,
+				900000000000000000000102 /* CodexAppServerClient.swift */,
+				A00000000000000000000102 /* RefreshCoordinator.swift */,
+				H20000000000000000000105 /* InstalledCodexVersionProvider.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		400000000000000000000202 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				P20000000000000000000102 /* ProviderDashboardStore.swift */,
+				400000000000000000000102 /* QuotaViewModel.swift */,
+				B00000000000000000000102 /* QuotaStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		400000000000000000000203 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				P90000000000000000000102 /* ProviderCardPresentation.swift */,
+				400000000000000000000104 /* FloatingPanelModels.swift */,
+				400000000000000000000105 /* DebugFixtures.swift */,
+				I20000000000000000000101 /* DebugUITestRuntime.swift */,
+				I20000000000000000000102 /* DebugUITestControlWindow.swift */,
+				400000000000000000000106 /* OrbView.swift */,
+				400000000000000000000107 /* CardView.swift */,
+				400000000000000000000108 /* FloatingPanelController.swift */,
+				C00000000000000000000105 /* StatusItemPresentation.swift */,
+				D00000000000000000000102 /* StatusItemController.swift */,
+				G20000000000000000000103 /* OnboardingView.swift */,
+				G20000000000000000000104 /* OnboardingWindowController.swift */,
+				H20000000000000000000104 /* SettingsView.swift */,
+				T40000000000000000000101 /* ThemePreviewView.swift */,
+				T60000000000000000000102 /* CustomThemeEditorView.swift */,
+				TB0000000000000000000104 /* ThemeEditorWindowController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C00000000000000000000201 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C00000000000000000000102 /* AppSettings.swift */,
+				C00000000000000000000103 /* SettingsStore.swift */,
+				H20000000000000000000101 /* SettingsPresentation.swift */,
+				H20000000000000000000102 /* SettingsViewModel.swift */,
+				H20000000000000000000103 /* SettingsWindowController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F20000000000000000000201 /* Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				P20000000000000000000103 /* ProviderHub.swift */,
+				P80000000000000000000102 /* ProviderRuntimeCoordinator.swift */,
+				P30000000000000000000101 /* CodexProviderConnector.swift */,
+				P70000000000000000000101 /* CodexProviderSnapshotMapper.swift */,
+				P40000000000000000000101 /* LocalProviderConnectors.swift */,
+				C39000000000000000000101 /* ClaudeProviderConnector.swift */,
+				F20000000000000000000101 /* AppLifecycleCoordinator.swift */,
+				F20000000000000000000102 /* SessionLifecycleMonitor.swift */,
+				G20000000000000000000101 /* LoginItemService.swift */,
+				G20000000000000000000102 /* OnboardingController.swift */,
+			);
+			path = Lifecycle;
+			sourceTree = "<group>";
+		};
+		T20000000000000000000201 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				T20000000000000000000101 /* ThemeSchema.swift */,
+				T20000000000000000000102 /* BuiltInThemes.swift */,
+				TC0000000000000000000102 /* BuiltInThemeArtworkLoader.swift */,
+				T30000000000000000000101 /* ThemeValidator.swift */,
+				T30000000000000000000102 /* ThemeViewSupport.swift */,
+				T50000000000000000000101 /* ThemeRasterProcessor.swift */,
+				T60000000000000000000101 /* ThemeEditorViewModel.swift */,
+				T70000000000000000000101 /* ThemeImportExportService.swift */,
+				T70000000000000000000102 /* ThemeStore.swift */,
+				TA0000000000000000000101 /* ProductionThemeRuntime.swift */,
+				TB0000000000000000000101 /* ThemeEditorProductionSession.swift */,
+				TB0000000000000000000103 /* ThemeEditorPanels.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		T80000000000000000000201 /* Accessibility */ = {
+			isa = PBXGroup;
+			children = (
+				T80000000000000000000101 /* AccessibilitySemanticTranscript.swift */,
+			);
+			path = Accessibility;
+			sourceTree = "<group>";
+		};
+		T90000000000000000000201 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				T90000000000000000000101 /* LocalizedPresenters.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		T90000000000000000000202 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				TE0000000000000000000101 /* Assets.xcassets */,
+				T90000000000000000000103 /* Localizable.xcstrings */,
+				TD0000000000000000000201 /* ThemeArtwork */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		TD0000000000000000000201 /* ThemeArtwork */ = {
+			isa = PBXGroup;
+			children = (
+				TD0000000000000000000101 /* theme-morandi-background.png */,
+				TD0000000000000000000102 /* theme-cyberpunk-background.png */,
+				TD0000000000000000000103 /* theme-warm-hand-drawn-background.png */,
+				TD0000000000000000000104 /* theme-glass-background.png */,
+				TD0000000000000000000105 /* theme-sketch-background.png */,
+				TD0000000000000000000106 /* theme-cartoon-illustration-background.png */,
+			);
+			path = ThemeArtwork;
+			sourceTree = "<group>";
+		};
+		000000000000000000000010 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000006 /* CodexQuotaMonitor.app */,
+				000000000000000000000007 /* CodexQuotaMonitorTests.xctest */,
+				A30000000000000000000001 /* CodexQuotaMonitorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000000000000000000000011 = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000000E /* CodexQuotaMonitor */,
+				00000000000000000000000F /* CodexQuotaMonitorTests */,
+				A30000000000000000000003 /* CodexQuotaMonitorUITests */,
+				000000000000000000000010 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000000000000000000000012 /* CodexQuotaMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000030 /* Build configuration list for PBXNativeTarget "CodexQuotaMonitor" */;
+			buildPhases = (
+				00000000000000000000000C /* Sources */,
+				000000000000000000000008 /* Frameworks */,
+				00000000000000000000000A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodexQuotaMonitor;
+			productName = CodexQuotaMonitor;
+			productReference = 000000000000000000000006 /* CodexQuotaMonitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		000000000000000000000013 /* CodexQuotaMonitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000031 /* Build configuration list for PBXNativeTarget "CodexQuotaMonitorTests" */;
+			buildPhases = (
+				00000000000000000000000D /* Sources */,
+				000000000000000000000009 /* Frameworks */,
+				00000000000000000000000B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				000000000000000000000016 /* PBXTargetDependency */,
+			);
+			name = CodexQuotaMonitorTests;
+			productName = CodexQuotaMonitorTests;
+			productReference = 000000000000000000000007 /* CodexQuotaMonitorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A30000000000000000000002 /* CodexQuotaMonitorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3000000000000000000000D /* Build configuration list for PBXNativeTarget "CodexQuotaMonitorUITests" */;
+			buildPhases = (
+				A30000000000000000000008 /* Sources */,
+				A30000000000000000000006 /* Frameworks */,
+				A30000000000000000000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3000000000000000000000A /* PBXTargetDependency */,
+			);
+			name = CodexQuotaMonitorUITests;
+			productName = CodexQuotaMonitorUITests;
+			productReference = A30000000000000000000001 /* CodexQuotaMonitorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000014 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					000000000000000000000012 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					000000000000000000000013 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 000000000000000000000012;
+					};
+					A30000000000000000000002 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 000000000000000000000012;
+					};
+				};
+			};
+			buildConfigurationList = 000000000000000000000032 /* Build configuration list for PBXProject "CodexQuotaMonitor" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000000000000000000011;
+			productRefGroup = 000000000000000000000010 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000000000000000000012 /* CodexQuotaMonitor */,
+				000000000000000000000013 /* CodexQuotaMonitorTests */,
+				A30000000000000000000002 /* CodexQuotaMonitorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00000000000000000000000A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				800000000000000000000002 /* CodexTrustManifest.json in Resources */,
+				TE0000000000000000000001 /* Assets.xcassets in Resources */,
+				T90000000000000000000003 /* Localizable.xcstrings in Resources */,
+				TD0000000000000000000001 /* theme-morandi-background.png in Resources */,
+				TD0000000000000000000002 /* theme-cyberpunk-background.png in Resources */,
+				TD0000000000000000000003 /* theme-warm-hand-drawn-background.png in Resources */,
+				TD0000000000000000000004 /* theme-glass-background.png in Resources */,
+				TD0000000000000000000005 /* theme-sketch-background.png in Resources */,
+				TD0000000000000000000006 /* theme-cartoon-illustration-background.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000000B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				200000000000000000000002 /* codex_bucket_priority.json in Resources */,
+				200000000000000000000003 /* legacy_fallback.json in Resources */,
+				200000000000000000000004 /* null_windows.json in Resources */,
+				200000000000000000000005 /* invalid_negative_percent.json in Resources */,
+				200000000000000000000006 /* invalid_over_percent.json in Resources */,
+				200000000000000000000007 /* unknown_360_window.json in Resources */,
+				200000000000000000000008 /* optional_reset_time.json in Resources */,
+				200000000000000000000009 /* unknown_plan_extra_keys.json in Resources */,
+				20000000000000000000000A /* epoch_conversion.json in Resources */,
+				500000000000000000000002 /* rate_limit_catalog_full.json in Resources */,
+				600000000000000000000002 /* token_usage_omitted.json in Resources */,
+				600000000000000000000003 /* token_usage_null.json in Resources */,
+				600000000000000000000004 /* token_usage_empty.json in Resources */,
+				600000000000000000000005 /* token_usage_full.json in Resources */,
+				600000000000000000000006 /* token_usage_anomalies.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30000000000000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00000000000000000000000C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				P10000000000000000000002 /* ProviderDomain.swift in Sources */,
+				P20000000000000000000002 /* ProviderDashboardStore.swift in Sources */,
+				P20000000000000000000003 /* ProviderHub.swift in Sources */,
+				P80000000000000000000002 /* ProviderRuntimeCoordinator.swift in Sources */,
+				P90000000000000000000002 /* ProviderCardPresentation.swift in Sources */,
+				P30000000000000000000001 /* CodexProviderConnector.swift in Sources */,
+				P70000000000000000000001 /* CodexProviderSnapshotMapper.swift in Sources */,
+				P40000000000000000000001 /* LocalProviderConnectors.swift in Sources */,
+				C39000000000000000000001 /* ClaudeProviderConnector.swift in Sources */,
+				C31000000000000000000002 /* ClaudeStatusLineRelay.swift in Sources */,
+				C32000000000000000000002 /* ClaudeAuthStatus.swift in Sources */,
+				C34000000000000000000002 /* ClaudeRelayCommand.swift in Sources */,
+				C35000000000000000000002 /* ClaudeStatusLineSettingsPolicy.swift in Sources */,
+				C36000000000000000000002 /* ClaudeStatusLineSettingsInstaller.swift in Sources */,
+				C37000000000000000000001 /* ClaudeStatusLineSettingsPOSIXStore.swift in Sources */,
+				C3A000000000000000000002 /* ClaudeExecutableLocator.swift in Sources */,
+				000000000000000000000001 /* CodexQuotaMonitorApp.swift in Sources */,
+				400000000000000000000009 /* AppDelegate.swift in Sources */,
+				20000000000000000000000B /* NormalizedQuota.swift in Sources */,
+				20000000000000000000000C /* QuotaLoading.swift in Sources */,
+				20000000000000000000000E /* CodexRPCClient.swift in Sources */,
+				300000000000000000000002 /* CodexBinaryLocator.swift in Sources */,
+				300000000000000000000004 /* AppServerProcessTransport.swift in Sources */,
+				300000000000000000000006 /* AppServerQuotaLoader.swift in Sources */,
+				400000000000000000000002 /* QuotaViewModel.swift in Sources */,
+				400000000000000000000004 /* FloatingPanelModels.swift in Sources */,
+				400000000000000000000005 /* DebugFixtures.swift in Sources */,
+				I20000000000000000000001 /* DebugUITestRuntime.swift in Sources */,
+				I20000000000000000000002 /* DebugUITestControlWindow.swift in Sources */,
+				400000000000000000000006 /* OrbView.swift in Sources */,
+				400000000000000000000007 /* CardView.swift in Sources */,
+				400000000000000000000008 /* FloatingPanelController.swift in Sources */,
+				500000000000000000000003 /* RateLimitCatalog.swift in Sources */,
+				600000000000000000000007 /* TokenActivity.swift in Sources */,
+				700000000000000000000002 /* CapabilityState.swift in Sources */,
+				800000000000000000000003 /* CodexExecutableVerifier.swift in Sources */,
+				900000000000000000000002 /* CodexAppServerClient.swift in Sources */,
+				A00000000000000000000002 /* RefreshCoordinator.swift in Sources */,
+				H20000000000000000000005 /* InstalledCodexVersionProvider.swift in Sources */,
+				B00000000000000000000002 /* QuotaStore.swift in Sources */,
+				C00000000000000000000002 /* AppSettings.swift in Sources */,
+				C00000000000000000000003 /* SettingsStore.swift in Sources */,
+				H20000000000000000000001 /* SettingsPresentation.swift in Sources */,
+				H20000000000000000000002 /* SettingsViewModel.swift in Sources */,
+				H20000000000000000000003 /* SettingsWindowController.swift in Sources */,
+				C00000000000000000000005 /* StatusItemPresentation.swift in Sources */,
+				D00000000000000000000002 /* StatusItemController.swift in Sources */,
+				F20000000000000000000001 /* AppLifecycleCoordinator.swift in Sources */,
+				F20000000000000000000002 /* SessionLifecycleMonitor.swift in Sources */,
+				G20000000000000000000001 /* LoginItemService.swift in Sources */,
+				G20000000000000000000002 /* OnboardingController.swift in Sources */,
+				G20000000000000000000003 /* OnboardingView.swift in Sources */,
+				G20000000000000000000004 /* OnboardingWindowController.swift in Sources */,
+				H20000000000000000000004 /* SettingsView.swift in Sources */,
+				T20000000000000000000001 /* ThemeSchema.swift in Sources */,
+				T20000000000000000000002 /* BuiltInThemes.swift in Sources */,
+				TC0000000000000000000002 /* BuiltInThemeArtworkLoader.swift in Sources */,
+				T30000000000000000000001 /* ThemeValidator.swift in Sources */,
+				T30000000000000000000002 /* ThemeViewSupport.swift in Sources */,
+				T40000000000000000000001 /* ThemePreviewView.swift in Sources */,
+				T50000000000000000000001 /* ThemeRasterProcessor.swift in Sources */,
+				T60000000000000000000001 /* ThemeEditorViewModel.swift in Sources */,
+				T60000000000000000000002 /* CustomThemeEditorView.swift in Sources */,
+				T70000000000000000000001 /* ThemeImportExportService.swift in Sources */,
+				T70000000000000000000002 /* ThemeStore.swift in Sources */,
+				T80000000000000000000001 /* AccessibilitySemanticTranscript.swift in Sources */,
+				T90000000000000000000001 /* LocalizedPresenters.swift in Sources */,
+				TA0000000000000000000001 /* ProductionThemeRuntime.swift in Sources */,
+				TB0000000000000000000001 /* ThemeEditorProductionSession.swift in Sources */,
+				TB0000000000000000000003 /* ThemeEditorPanels.swift in Sources */,
+				TB0000000000000000000004 /* ThemeEditorWindowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000000D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				P10000000000000000000001 /* ProviderDomainTests.swift in Sources */,
+				P20000000000000000000001 /* ProviderHubTests.swift in Sources */,
+				P50000000000000000000001 /* CodexProviderConnectorTests.swift in Sources */,
+				P60000000000000000000001 /* LocalProviderConnectorTests.swift in Sources */,
+				P80000000000000000000001 /* ProviderRuntimeCompositionTests.swift in Sources */,
+				P90000000000000000000001 /* ProviderCardPresentationTests.swift in Sources */,
+				C31000000000000000000001 /* ClaudeStatusLineRelayTests.swift in Sources */,
+				C32000000000000000000001 /* ClaudeAuthStatusTests.swift in Sources */,
+				C34000000000000000000001 /* ClaudeRelayCommandTests.swift in Sources */,
+				C35000000000000000000001 /* ClaudeStatusLineSettingsPolicyTests.swift in Sources */,
+				C36000000000000000000001 /* ClaudeStatusLineSettingsInstallerTests.swift in Sources */,
+				C38000000000000000000001 /* ClaudeProviderConnectorTests.swift in Sources */,
+				C3A000000000000000000001 /* ClaudeExecutableLocatorTests.swift in Sources */,
+				200000000000000000000001 /* NormalizedQuotaTests.swift in Sources */,
+				20000000000000000000000D /* CodexRPCClientTests.swift in Sources */,
+				300000000000000000000001 /* CodexBinaryLocatorTests.swift in Sources */,
+				300000000000000000000003 /* AppServerProcessTransportTests.swift in Sources */,
+				300000000000000000000005 /* AppServerQuotaLoaderTests.swift in Sources */,
+				400000000000000000000001 /* QuotaViewModelTests.swift in Sources */,
+				400000000000000000000003 /* FloatingPanelModelTests.swift in Sources */,
+				500000000000000000000001 /* RateLimitCatalogTests.swift in Sources */,
+				600000000000000000000001 /* TokenActivityTests.swift in Sources */,
+				700000000000000000000001 /* CapabilityStateTests.swift in Sources */,
+				800000000000000000000001 /* CodexExecutableVerifierTests.swift in Sources */,
+				900000000000000000000001 /* CodexAppServerClientTests.swift in Sources */,
+				A00000000000000000000001 /* RefreshCoordinatorTests.swift in Sources */,
+				B00000000000000000000001 /* QuotaStoreTests.swift in Sources */,
+				C00000000000000000000001 /* SettingsStoreTests.swift in Sources */,
+				C00000000000000000000004 /* StatusItemPresentationTests.swift in Sources */,
+				D00000000000000000000001 /* StatusItemControllerTests.swift in Sources */,
+				E00000000000000000000001 /* SpacePolicyPresentationTests.swift in Sources */,
+				F10000000000000000000001 /* AppLifecycleCoordinatorTests.swift in Sources */,
+				G10000000000000000000001 /* LoginItemServiceTests.swift in Sources */,
+				G10000000000000000000002 /* OnboardingControllerTests.swift in Sources */,
+				G10000000000000000000003 /* AppOnboardingLifecycleTests.swift in Sources */,
+				H10000000000000000000001 /* SettingsPresentationTests.swift in Sources */,
+				I10000000000000000000001 /* DebugUITestRuntimeTests.swift in Sources */,
+				T10000000000000000000001 /* BuiltInThemeContractTests.swift in Sources */,
+				T30000000000000000000003 /* ThemeValidatorTests.swift in Sources */,
+				T40000000000000000000002 /* ThemeViewIntegrationTests.swift in Sources */,
+				T50000000000000000000002 /* ThemeRasterProcessorTests.swift in Sources */,
+				T60000000000000000000003 /* ThemeEditorViewModelTests.swift in Sources */,
+				T70000000000000000000003 /* ThemeImportSecurityTests.swift in Sources */,
+				T70000000000000000000004 /* ThemeStoreTests.swift in Sources */,
+				T80000000000000000000002 /* AccessibilityContractTests.swift in Sources */,
+				U10000000000000000000002 /* XCUIElementTextCandidates.swift in Sources */,
+				U10000000000000000000001 /* XCUIElementTextCandidatesTests.swift in Sources */,
+				T90000000000000000000002 /* LocalizationCatalogTests.swift in Sources */,
+				TA0000000000000000000002 /* ProductionThemeRuntimeTests.swift in Sources */,
+				TB0000000000000000000002 /* ThemeEditorProductionTests.swift in Sources */,
+				TC0000000000000000000001 /* BuiltInThemeArtworkLoaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30000000000000000000008 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30000000000000000000005 /* CodexQuotaMonitorUITests.swift in Sources */,
+				U10000000000000000000003 /* XCUIElementTextCandidates.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		000000000000000000000016 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000000000000000000000012 /* CodexQuotaMonitor */;
+			targetProxy = 000000000000000000000015 /* PBXContainerItemProxy */;
+		};
+		A3000000000000000000000A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000000000000000000000012 /* CodexQuotaMonitor */;
+			targetProxy = A30000000000000000000009 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000000020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CodexQuotaMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinrow.quotaharbor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		000000000000000000000021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CodexQuotaMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinrow.quotaharbor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		000000000000000000000022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinrow.quotaharbor.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodexQuotaMonitor.app/Contents/MacOS/CodexQuotaMonitor";
+			};
+			name = Debug;
+		};
+		000000000000000000000023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinrow.quotaharbor.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodexQuotaMonitor.app/Contents/MacOS/CodexQuotaMonitor";
+			};
+			name = Release;
+		};
+		A3000000000000000000000B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinrow.quotaharbor.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TEST_TARGET_NAME = CodexQuotaMonitor;
+			};
+			name = Debug;
+		};
+		A3000000000000000000000C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinrow.quotaharbor.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TEST_TARGET_NAME = CodexQuotaMonitor;
+			};
+			name = Release;
+		};
+		000000000000000000000024 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		000000000000000000000025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000000000000000030 /* Build configuration list for PBXNativeTarget "CodexQuotaMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000020 /* Debug */,
+				000000000000000000000021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000031 /* Build configuration list for PBXNativeTarget "CodexQuotaMonitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000022 /* Debug */,
+				000000000000000000000023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3000000000000000000000D /* Build configuration list for PBXNativeTarget "CodexQuotaMonitorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3000000000000000000000B /* Debug */,
+				A3000000000000000000000C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000032 /* Build configuration list for PBXProject "CodexQuotaMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000024 /* Debug */,
+				000000000000000000000025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000014 /* Project object */;
+}

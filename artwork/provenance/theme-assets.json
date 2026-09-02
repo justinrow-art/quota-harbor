@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-17T00:00:00+08:00",
+  "generator": {
+    "provider": "OpenAI",
+    "interface": "Codex built-in image generation",
+    "modelIdentifier": null,
+    "modelIdentifierNote": "The built-in interface did not expose a model identifier.",
+    "disclosure": "All six theme source images are AI-generated. The project owner approved the six directions, and an independent AI reviewer performed visual and mechanical checks before release use; neither review is legal advice.",
+    "termsReference": "https://openai.com/policies/terms-of-use/"
+  },
+  "commonPromptConstraints": [
+    "original square illustration",
+    "quiet low-detail center and upper-left information-safe area",
+    "no people, faces, characters, text, letters, numbers, logos, watermarks, brands or copyrighted symbols",
+    "no imitation of a named artist, studio or franchise"
+  ],
+  "sourceOutput": {
+    "format": "PNG",
+    "pixelWidth": 1254,
+    "pixelHeight": 1254,
+    "requestedIntent": "2048x2048 source master",
+    "actualSizeDisclosure": "The generator returned native 1254x1254 outputs. They were not upscaled or represented as native 2048px images. Runtime rendering derives a maximum tile size from these actual pixels and the display scale, then repeats and mirrors tiles for wider surfaces so no tile is upscaled."
+  },
+  "assets": [
+    {
+      "themeID": "morandi",
+      "sourcePath": "artwork/source-masters/01-morandi.png",
+      "sourceSHA256": "b8e1e353d5573e5fb6db7eb3ce930fdd9c51ad6b2b0d537f60133e55780b7bb7",
+      "runtimePath": "CodexQuotaMonitor/Resources/ThemeArtwork/theme-morandi-background.png",
+      "runtimeSHA256": "cadcee3e750866a93b42f2c85dc20b318eecce3817561ef9209633812a850cbe",
+      "promptSummary": "Muted Morandi abstract landscape with layered hills, arches and a nonliteral quota orb."
+    },
+    {
+      "themeID": "cyberpunk",
+      "sourcePath": "artwork/source-masters/02-cyberpunk.png",
+      "sourceSHA256": "bfb7a50a0c8ed3fa124d4950e9711ac1c08051c73656cb6d18da32500e3600fa",
+      "runtimePath": "CodexQuotaMonitor/Resources/ThemeArtwork/theme-cyberpunk-background.png",
+      "runtimeSHA256": "6c39f3cbc44917b4562616bb0efb6689c51c1269aebe637834558981f757863e",
+      "promptSummary": "Dark abstract data city with cyan and magenta circuit rivers and energy halos."
+    },
+    {
+      "themeID": "warm-hand-drawn",
+      "sourcePath": "artwork/source-masters/03-warm-hand-drawn.png",
+      "sourceSHA256": "e59cecd2f0f44f43843facfdd9007cec1bc1171e499583d69251bf9821868fc2",
+      "runtimePath": "CodexQuotaMonitor/Resources/ThemeArtwork/theme-warm-hand-drawn-background.png",
+      "runtimeSHA256": "219b80f9d6e1252fb3c118da6d5b89b575f508dbd3193c1c8a210750dda8300f",
+      "promptSummary": "Original warm hand-painted nature scene with leaves, clouds, meadow forms and circular energy accents."
+    },
+    {
+      "themeID": "glass",
+      "sourcePath": "artwork/source-masters/04-glass.png",
+      "sourceSHA256": "c6f2c562a09b25b2c1abf93ff2fc5e3eaa156867b43727540d92ad53044bcf05",
+      "runtimePath": "CodexQuotaMonitor/Resources/ThemeArtwork/theme-glass-background.png",
+      "runtimeSHA256": "366795649d003433a19f411ba42dae9476c712ecd7c9c64095e070bfdc1dfa9a",
+      "promptSummary": "Translucent glass ribbons, frosted layers and restrained prismatic edge refractions."
+    },
+    {
+      "themeID": "sketch",
+      "sourcePath": "artwork/source-masters/05-sketch.png",
+      "sourceSHA256": "1535913dd18cbf982e666b6630cd2cce29c4a83592ee205bd049511204dfb5d3",
+      "runtimePath": "CodexQuotaMonitor/Resources/ThemeArtwork/theme-sketch-background.png",
+      "runtimeSHA256": "e3a02e9e9c8960c53be71194345bf401a562f66a497b7e9bbf6b5d765234a4c6",
+      "promptSummary": "Graphite and charcoal abstract landscape with a circular flow motif and slate-blue accent."
+    },
+    {
+      "themeID": "cartoon-illustration",
+      "sourcePath": "artwork/source-masters/06-cartoon.png",
+      "sourceSHA256": "2462b2f259f4a69c2ecd55a35821cbce62e495e351d7aea1e736233cb5031dbc",
+      "runtimePath": "CodexQuotaMonitor/Resources/ThemeArtwork/theme-cartoon-illustration-background.png",
+      "runtimeSHA256": "a60efeea90df3145b27d9397ed902d47a52ef7e9a5e079e026c42ef613a24d99",
+      "promptSummary": "Original playful abstract world of clouds, hills, energy bubbles and geometric tokens."
+    }
+  ],
+  "runtimeOutput": {
+    "format": "PNG",
+    "pixelWidth": 1254,
+    "pixelHeight": 1254,
+    "frameCount": 1,
+    "colorSpace": "sRGB IEC61966-2.1",
+    "metadataPolicy": "Re-encoded by Apple ImageIO/CoreGraphics with a fresh sRGB pixel buffer and no copied source metadata.",
+    "preparationScript": "scripts/prepare_release_assets.swift"
+  },
+  "appIcon": {
+    "generation": "Project-native vector drawing rendered locally; not AI-generated.",
+    "masterPath": "artwork/source-masters/app-icon-master.png",
+    "masterPixelWidth": 2048,
+    "masterPixelHeight": 2048,
+    "masterSHA256": "0fbe7e5abc49cebf73ed7771bf5993f496f608808f8b616f41bd7ef9f35d9332",
+    "generationScript": "scripts/generate_app_icon.swift",
+    "outputs": [
+      {
+        "path": "CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_16x16.png",
+        "sha256": "25688333ec8d450f593b962b9fe61aff2a0022845632e6475e86065c73a85acb"
+      },
+      {
+        "path": "CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_16x16@2x.png",
+        "sha256": "4263a847c2bc45dea96795604fe980780709c1256eafa9f25b7f6896823d530b"
+      },
+      {
+        "path": "CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_32x32.png",
+        "sha256": "4263a847c2bc45dea96795604fe980780709c1256eafa9f25b7f6896823d530b"
+      },
+      {
+        "path": "CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_32x32@2x.png",
+        "sha256": "3b3e3dce5bdde11c4be21f441c23c03f4319e21d403ccf0275352053cf7a51c1"
+      },
+      {
+        "path": "CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_128x128.png",
+        "sha256": "17da501e6e674e8ae0aaa2d37b36eed3b7aeb29e91fa7898b6904acb66358e29"
+      },
+      {
+        "path": "CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_128x128@2x.png",
+        "sha256": "25d39747216ebdf01cf193477f061b94c35999ff8ba268997f5f0b7387b59e7a"
+      },
+      {
+        "path": "CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_256x256.png",
+        "sha256": "25d39747216ebdf01cf193477f061b94c35999ff8ba268997f5f0b7387b59e7a"
+      },
+      {
+        "path": "CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_256x256@2x.png",
+        "sha256": "935c33b142e5452241b74dff7124290e4112522a1c12f497c10dd6ed16eaec0a"
+      },
+      {
+        "path": "CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_512x512.png",
+        "sha256": "935c33b142e5452241b74dff7124290e4112522a1c12f497c10dd6ed16eaec0a"
+      },
+      {
+        "path": "CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_512x512@2x.png",
+        "sha256": "5942a6d041b083df05b4de7ff7a1880ab2e9648b77fcd7bf220249724a491612"
+      }
+    ],
+    "delivery": "Unmasked square flattened artwork in a macOS AppIcon asset catalog for macOS 14+ compatibility; the system applies the final icon shape."
+  },
+  "review": {
+    "mechanical": "passed: all six runtime images are distinct, decodable single-frame 1254x1254 sRGB PNG files; deterministic re-encode verified",
+    "visual": "passed: project-owner selection and independent AI visual review found no people, faces, characters, text, logos, watermarks or recognizable third-party IP; automated theme tests enforce the declared text and icon contrast rules, and no standalone exact pixel-ratio claim is made",
+    "legalNote": "This provenance record is not legal advice. The publisher remains responsible for final trademark, copyright and jurisdiction-specific review."
+  }
+}

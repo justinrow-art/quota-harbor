@@ -1,0 +1,14 @@
+{
+  "rateLimits": {
+    "planType": "future_ultra",
+    "primary": {
+      "usedPercent": 33,
+      "windowDurationMins": 300,
+      "resetsAt": null,
+      "futureWindowField": { "nested": true }
+    },
+    "secondary": null,
+    "futureSnapshotField": [1, 2, 3]
+  },
+  "futureResponseField": "ignored"
+}

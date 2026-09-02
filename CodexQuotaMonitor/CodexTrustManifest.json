@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "parentPath": "/Applications/ChatGPT.app",
+  "childRelativePath": "Contents/Resources/codex",
+  "parentIdentifier": "com.openai.codex",
+  "childIdentifier": "codex",
+  "teamIdentifier": "2DC432GLL2",
+  "architectures": ["arm64"],
+  "arguments": ["app-server", "--listen", "stdio://"],
+  "environmentKeys": ["HOME", "PATH", "TMPDIR", "USER", "LOGNAME", "LANG", "LC_ALL"]
+}

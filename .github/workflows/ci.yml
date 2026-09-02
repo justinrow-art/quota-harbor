@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  macos-arm64:
+    name: macOS arm64 source, security, and tests
+    runs-on: macos-15
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Record toolchain
+        run: |
+          sw_vers
+          uname -m
+          xcodebuild -version
+          swift --version
+
+      - name: Install repository verification tools
+        run: |
+          brew install ripgrep
+          rg --version
+
+      - name: Verify repository and canonical security gate
+        run: bash scripts/verify_repository.sh
+
+      - name: Verify deterministic theme derivatives
+        run: |
+          swift scripts/prepare_release_assets.swift
+          git diff --exit-code -- CodexQuotaMonitor/Resources/ThemeArtwork
+
+      - name: Run deterministic unit and contract tests
+        run: |
+          xcodebuild test \
+            -project CodexQuotaMonitor.xcodeproj \
+            -scheme CodexQuotaMonitorCI \
+            -destination 'platform=macOS,arch=arm64' \
+            -derivedDataPath "$RUNNER_TEMP/CQM-DerivedData" \
+            -disableAutomaticPackageResolution \
+            -parallel-testing-enabled NO \
+            -only-testing:CodexQuotaMonitorTests \
+            CODE_SIGN_IDENTITY=- \
+            CODE_SIGNING_ALLOWED=YES \
+            CODE_SIGNING_REQUIRED=YES \
+            COMPILER_INDEX_STORE_ENABLE=NO \
+            SWIFT_TREAT_WARNINGS_AS_ERRORS=YES
+
+      - name: Build source archive smoke candidate
+        run: bash scripts/create_source_archive.sh "$RUNNER_TEMP/CQM-Source-Release"

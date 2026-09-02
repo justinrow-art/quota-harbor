@@ -1,0 +1,18 @@
+{
+  "rateLimits": {
+    "planType": "free",
+    "primary": {
+      "usedPercent": 25,
+      "windowDurationMins": 300,
+      "resetsAt": null
+    },
+    "secondary": null
+  },
+  "rateLimitsByLimitId": {
+    "other": {
+      "planType": "enterprise",
+      "primary": { "usedPercent": 99 },
+      "secondary": null
+    }
+  }
+}

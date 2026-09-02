@@ -1,0 +1,82 @@
+{
+  "rateLimitResetCredits": {
+    "availableCount": 2,
+    "credits": [
+      {
+        "description": "One-time reset",
+        "expiresAt": 1800000000,
+        "grantedAt": 1700000000,
+        "id": "reset-credit-1",
+        "resetType": "codexRateLimits",
+        "status": "available",
+        "title": "Reset Codex limits"
+      }
+    ]
+  },
+  "rateLimits": {
+    "credits": {
+      "balance": "5.50",
+      "hasCredits": true,
+      "unlimited": false
+    },
+    "individualLimit": {
+      "limit": "100.00",
+      "remainingPercent": 75,
+      "resetsAt": 1727000000,
+      "used": "25.00"
+    },
+    "limitId": "legacy-id",
+    "limitName": "Legacy limits",
+    "planType": "free",
+    "primary": {
+      "usedPercent": 90,
+      "windowDurationMins": 300,
+      "resetsAt": 1725000000
+    },
+    "rateLimitReachedType": "workspace_member_usage_limit_reached",
+    "secondary": null
+  },
+  "rateLimitsByLimitId": {
+    "search": {
+      "credits": null,
+      "individualLimit": null,
+      "limitId": "search-v2",
+      "limitName": "Search",
+      "planType": "team",
+      "primary": {
+        "usedPercent": 5,
+        "windowDurationMins": 60,
+        "resetsAt": 1725100000
+      },
+      "rateLimitReachedType": null,
+      "secondary": null
+    },
+    "codex": {
+      "credits": {
+        "balance": "12.75",
+        "hasCredits": true,
+        "unlimited": false
+      },
+      "individualLimit": {
+        "limit": "200.00",
+        "remainingPercent": 60,
+        "resetsAt": 1728000000,
+        "used": "80.00"
+      },
+      "limitId": "codex-v2",
+      "limitName": "Codex",
+      "planType": "plus",
+      "primary": {
+        "usedPercent": 20,
+        "windowDurationMins": 300,
+        "resetsAt": 1725200000
+      },
+      "rateLimitReachedType": "rate_limit_reached",
+      "secondary": {
+        "usedPercent": 40,
+        "windowDurationMins": 10080,
+        "resetsAt": 1726200000
+      }
+    }
+  }
+}
