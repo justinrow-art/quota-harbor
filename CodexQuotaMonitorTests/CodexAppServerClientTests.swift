@@ -643,18 +643,32 @@ final class CodexAppServerClientTests: XCTestCase {
 
     func testProductionFactoryBuildsExactVerifiedPolicyWithoutLaunching() async throws {
         let bundle = try applicationBundle()
-        let connection = try await ProductionCodexAppServerConnectionFactory(
+        let manifest = try CodexTrustManifest.bundled(in: bundle)
+        let factory = ProductionCodexAppServerConnectionFactory(
             manifestLoader: {
                 try CodexTrustManifest.bundled(in: bundle)
             }
         )
-            .makeConnection()
+        let executablePath = manifest.parentPath + "/" + manifest.childRelativePath
+
+        // Hosted CI has no official installation: verify the fail-closed path
+        // there, and the full verified transport policy where it is installed.
+        if !FileManager.default.fileExists(atPath: executablePath) {
+            do {
+                _ = try await factory.makeConnection()
+                XCTFail("A missing official executable must not produce a connection")
+            } catch {
+                XCTAssertEqual(error as? CodexExecutableTrustError, .missingPath)
+            }
+            return
+        }
+
+        let connection = try await factory.makeConnection()
         let transport = try XCTUnwrap(connection as? AppServerProcessTransport)
-        let manifest = try CodexTrustManifest.bundled(in: bundle)
 
         XCTAssertEqual(
             transport.configuration.executableURL.path,
-            manifest.parentPath + "/" + manifest.childRelativePath
+            executablePath
         )
         XCTAssertEqual(transport.configuration.arguments, manifest.arguments)
         let environmentKeys = Set(

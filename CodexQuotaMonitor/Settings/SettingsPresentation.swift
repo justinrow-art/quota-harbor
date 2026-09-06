@@ -848,7 +848,7 @@ struct SettingsPresenter {
     ) -> SettingsPresentation {
         let text = injectedText ?? LocalizedTextProvider(
             language: settings.language,
-            systemLocale: .current
+            systemLocale: systemLocale
         )
         let rateCapability = capabilityRow(
             lane: .rateLimits,

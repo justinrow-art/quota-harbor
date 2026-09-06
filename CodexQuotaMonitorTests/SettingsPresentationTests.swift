@@ -17,6 +17,7 @@ final class SettingsPresentationTests: XCTestCase {
             (daily, 60),
         ])
         var settings = AppSettings.defaults
+        settings.language = .traditionalChinese
         settings.menuBarMode = .manual([fiveHour, week])
 
         let result = SettingsPresenter().makePresentation(
@@ -48,6 +49,7 @@ final class SettingsPresentationTests: XCTestCase {
         let retired = identity(.secondary, 10_080)
         let catalog = try makeCatalog([(live, 20)])
         var settings = AppSettings.defaults
+        settings.language = .traditionalChinese
         settings.menuBarMode = .manual([retired, live])
 
         let result = SettingsPresenter().makePresentation(
@@ -147,9 +149,11 @@ final class SettingsPresentationTests: XCTestCase {
     }
 
     func testDiagnosticsRejectsPathNewlineAndCredentialCanariesAndViewerEqualsCopyText() {
+        var settings = AppSettings.defaults
+        settings.language = .traditionalChinese
         let fixturePath = "/Users/" + "alice/Codex.app"
         let result = SettingsPresenter().makePresentation(
-            settings: .defaults,
+            settings: settings,
             rateState: .unavailable(.unauthenticated),
             usageState: .loading,
             rateLastSuccessAt: nil,
@@ -1931,22 +1935,28 @@ final class SettingsPresentationTests: XCTestCase {
         let capturedAt = now.addingTimeInterval(-7_200)
         let catalog = try makeCatalog([(identity(.primary, 300), 20)])
 
-        for language in AppLanguage.allCases {
-            var settings = AppSettings.defaults
-            settings.language = language
-            let row = try XCTUnwrap(
-                makeSettingsPresentation(
-                    settings: settings,
-                    rateState: .fresh(catalog, capturedAt)
-                ).general.providers.rows.first
-            )
-            let expected = LocalizedTextProvider(
-                language: language,
-                systemLocale: Locale(identifier: "zh_TW")
-            ).text(.formatHoursAgo, Int64(2))
+        for localeIdentifier in ["zh_TW", "en_US"] {
+            let systemLocale = Locale(identifier: localeIdentifier)
+            for language in AppLanguage.allCases {
+                var settings = AppSettings.defaults
+                settings.language = language
+                let row = try XCTUnwrap(
+                    makeSettingsPresentation(
+                        settings: settings,
+                        rateState: .fresh(catalog, capturedAt),
+                        systemLocale: systemLocale
+                    ).general.providers.rows.first
+                )
+                let expected = LocalizedTextProvider(
+                    language: language,
+                    systemLocale: systemLocale
+                ).text(.formatHoursAgo, Int64(2))
 
-            XCTAssertEqual(row.lastUpdatedText, expected, "\(language)")
-            XCTAssertFalse(row.lastUpdatedText?.contains("T") ?? true)
+                XCTAssertEqual(
+                    row.lastUpdatedText, expected, "\(language), \(localeIdentifier)"
+                )
+                XCTAssertFalse(row.lastUpdatedText?.contains("T") ?? true)
+            }
         }
     }
 
@@ -2092,7 +2102,8 @@ final class SettingsPresentationTests: XCTestCase {
     private func makeSettingsPresentation(
         settings: AppSettings,
         rateState: CapabilityState<RateLimitCatalog> = .loading,
-        dashboardStates: [ProviderID: ProviderPresentationState] = [:]
+        dashboardStates: [ProviderID: ProviderPresentationState] = [:],
+        systemLocale: Locale = Locale(identifier: "zh_TW")
     ) -> SettingsPresentation {
         SettingsPresenter().makePresentation(
             settings: settings,
@@ -2108,7 +2119,7 @@ final class SettingsPresentationTests: XCTestCase {
             appVersion: "1.0",
             now: now,
             dashboardStates: dashboardStates,
-            systemLocale: Locale(identifier: "zh_TW")
+            systemLocale: systemLocale
         )
     }
 
