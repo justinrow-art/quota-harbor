@@ -352,6 +352,7 @@ reviewed_png_paths=(
     artwork/source-masters/05-sketch.png
     artwork/source-masters/06-cartoon.png
     artwork/source-masters/app-icon-master.png
+    artwork/showcase/quota-harbor-storyboard-v1.png
     CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_16x16.png
     CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_16x16@2x.png
     CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_32x32.png
@@ -380,6 +381,8 @@ jq -r '
     ] + [
         .appIcon.masterPath,
         (.appIcon.outputs[]?.path)
+    ] + [
+        .documentationAssets[]?.path
     ])[]
 ' "$STAGING/artwork/provenance/theme-assets.json" \
     | LC_ALL=C sort > "$manifest_png_paths"
@@ -401,6 +404,8 @@ jq -r '
     ] + [
         {path: .appIcon.masterPath, hash: .appIcon.masterSHA256},
         (.appIcon.outputs[]? | {path: .path, hash: .sha256})
+    ] + [
+        (.documentationAssets[]? | {path: .path, hash: .sha256})
     ])[]
     | "\(.path)  \(.hash)"
 ' "$STAGING/artwork/provenance/theme-assets.json" \

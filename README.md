@@ -2,13 +2,54 @@
 
 > 非官方社群專案，與 OpenAI、Anthropic 或 Apple 無隸屬、合作、認證或背書關係。產品名稱與商標均屬各自權利人所有。
 
-QuotaHarbor 是原生 macOS 選單列小工具。Codex 固定啟用；Claude Code 可由使用者選擇是否顯示。選單列與可保留、可拖曳的浮動卡片只呈現本機官方程式實際提供的連線與額度資料，不代替使用者登入、不修改使用量，也不把「沒有資料」顯示成 `0`。啟用 Claude 後，使用者可另外確認安裝本機 `statusLine` relay；隱藏 Claude 不會自動修改或移除 relay。
+QuotaHarbor 是一款簡單、方便的額度檢視工具，希望讓你在日常使用時，能輕鬆掌握需要的資訊。作為非官方作品，我們將重點放在清楚易讀、操作直覺，以及能融入桌面風格的使用體驗。
+
+我們提供多種內建主題，讓你隨著心情與桌面風格自由切換；也支援自訂外觀，打造更符合個人喜好的樣貌。希望它不只是實用的小工具，也能為你的桌面增添一點個人特色。
+
+這是我們的第一款作品，還有許多值得打磨的地方。歡迎分享使用心得、提出建議，或告訴我們遇到的問題，幫助它一步步變得更好。謝謝你願意試用，也希望你會喜歡！
 
 ![App icon](CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_256x256.png)
 
 [English README](README.en.md)
 
+## 六款內建主題 / Six built-in themes
+
+以下為專案現有的主題背景素材，不是程式操作截圖。選一款喜歡的風格，讓小工具更貼近你的桌面。
+
+These are the project's existing theme background artworks, not app screenshots. Pick a look that feels at home on your desktop.
+
+| 莫蘭迪 / Morandi | 賽博龐克 / Cyberpunk | 溫暖手繪風 / Warm Hand-drawn |
+| --- | --- | --- |
+| ![莫蘭迪主題背景 / Morandi theme artwork](CodexQuotaMonitor/Resources/ThemeArtwork/theme-morandi-background.png) | ![賽博龐克主題背景 / Cyberpunk theme artwork](CodexQuotaMonitor/Resources/ThemeArtwork/theme-cyberpunk-background.png) | ![溫暖手繪風主題背景 / Warm Hand-drawn theme artwork](CodexQuotaMonitor/Resources/ThemeArtwork/theme-warm-hand-drawn-background.png) |
+
+| 玻璃 / Glass | 素描 / Sketch | 卡通插畫 / Cartoon Illustration |
+| --- | --- | --- |
+| ![玻璃主題背景 / Glass theme artwork](CodexQuotaMonitor/Resources/ThemeArtwork/theme-glass-background.png) | ![素描主題背景 / Sketch theme artwork](CodexQuotaMonitor/Resources/ThemeArtwork/theme-sketch-background.png) | ![卡通插畫主題背景 / Cartoon Illustration theme artwork](CodexQuotaMonitor/Resources/ThemeArtwork/theme-cartoon-illustration-background.png) |
+
+## 主題展示分鏡 / Theme showcase storyboard
+
+使用上述六款主題製作的概念展示分鏡，呈現「查看資訊 → 挑選主題 → 配合心情 → 自訂風格 → 融入桌面 → 分享回饋」的介紹順序。圖中的卡片、色票與桌面輪廓僅供示意，不代表實際介面、操作步驟或真實額度資料。
+
+A concept storyboard built around the six themes above, introducing the experience of checking information, choosing a theme, matching your mood, personalizing the look, fitting it into your desktop, and sharing feedback. The cards, swatches, and desktop outlines are illustrative—not actual app screens, instructions, or real quota data.
+
+![QuotaHarbor 六款主題展示概念分鏡，非實際程式截圖 / Six-theme concept storyboard, not app screenshots](artwork/showcase/quota-harbor-storyboard-v1.png)
+
+| 分鏡 / Frame | 展示重點 / Scene |
+| --- | --- |
+| 01 · Morandi | 一眼查看資訊 / Check at a glance |
+| 02 · Cyberpunk | 挑選主題 / Choose a theme |
+| 03 · Warm Hand-drawn | 配合心情 / Match your mood |
+| 04 · Glass | 自訂個人風格 / Make it your own |
+| 05 · Sketch | 融入桌面 / Fit your desktop |
+| 06 · Cartoon | 分享使用回饋 / Share your feedback |
+
+素材說明：六款主題背景為專案既有的 AI 生成素材；「手繪風」與「素描」描述視覺風格，不代表人工繪製。展示分鏡以這些素材為參考，使用 AI 生成，不是實際程式截圖。
+
+Artwork note: The six theme backgrounds are existing AI-generated project assets. “Hand-drawn” and “Sketch” describe their visual styles, not how they were made. The storyboard is AI-generated using those artworks as references; it is not a set of app screenshots.
+
 ## 功能
+
+QuotaHarbor 是原生 macOS 選單列小工具。Codex 固定啟用；Claude Code 可由使用者選擇是否顯示。選單列與可保留、可拖曳的浮動卡片只呈現本機官方程式實際提供的連線與額度資料，不代替使用者登入、不修改使用量，也不把「沒有資料」顯示成 `0`。啟用 Claude 後，使用者可另外確認安裝本機 `statusLine` relay；隱藏 Claude 不會自動修改或移除 relay。
 
 - 設定與首次導覽固定啟用 Codex，並提供 Claude Code 顯示開關；Google Antigravity 與 Kimi Code 不在可選清單。Codex 使用專屬的自動／手動額度窗口控制。
 - Schema v3 仍可讀取既有設定；載入或寫入時保證 Codex 存在，保留使用者選擇的 Claude，並移除 Google／Kimi 等不支援的平台與偏好。
@@ -77,18 +118,6 @@ bash scripts/build_local_release.sh
 ```
 
 GUI tests 只能在隔離的 Aqua session 執行。一般已登入的桌面，以及該桌面上的普通小視窗，都不是隔離環境，禁止在那裡執行 GUI tests。隔離的 macOS VM 與專用測試 Mac 路線目前仍為 `PROBE_PENDING`；Xcode Cloud 環境變數可由本機偽造，因此在取得不可偽造的外部證明前明確不受支援。沒有隔離證據時必須停止，不得把手動 GUI 驗收推給使用者。詳見[隔離 UI 測試安全界線](docs/testing/isolated-ui-testing.md)。
-
-## 六種內建主題
-
-| 莫蘭迪 | 賽博龐克 | 暖色手繪 |
-| --- | --- | --- |
-| ![Morandi](artwork/source-masters/01-morandi.png) | ![Cyberpunk](artwork/source-masters/02-cyberpunk.png) | ![Warm hand-drawn](artwork/source-masters/03-warm-hand-drawn.png) |
-
-| 玻璃感 | 素描 | 卡通插畫 |
-| --- | --- | --- |
-| ![Glass](artwork/source-masters/04-glass.png) | ![Sketch](artwork/source-masters/05-sketch.png) | ![Cartoon illustration](artwork/source-masters/06-cartoon.png) |
-
-六張背景是為本專案產生的 AI 圖像；App icon 是專案內程式化繪製的原創幾何圖。來源、尺寸、prompt 約束、SHA-256 與審查限制記錄在 [素材 provenance](artwork/README.md)。
 
 ## 資料與安全邊界
 

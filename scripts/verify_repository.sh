@@ -620,6 +620,7 @@ artwork_files=(
     artwork/source-masters/05-sketch.png
     artwork/source-masters/06-cartoon.png
     artwork/source-masters/app-icon-master.png
+    artwork/showcase/quota-harbor-storyboard-v1.png
     CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_16x16.png
     CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_16x16@2x.png
     CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_32x32.png
@@ -649,6 +650,8 @@ jq -r '
     ] + [
         .appIcon.masterPath,
         (.appIcon.outputs[]?.path)
+    ] + [
+        .documentationAssets[]?.path
     ])[]
 ' "$manifest" | LC_ALL=C sort > "$manifest_png_paths"
 find "${public_paths[@]}" -type f -name '*.png' -print \
@@ -674,6 +677,8 @@ for relative_path in "${artwork_files[@]}"; do
         ] + [
             {path: .appIcon.masterPath, hash: .appIcon.masterSHA256},
             (.appIcon.outputs[]? | {path: .path, hash: .sha256})
+        ] + [
+            (.documentationAssets[]? | {path: .path, hash: .sha256})
         ])
         | any(.path == $path and .hash == $hash)
     ' "$manifest" >/dev/null \

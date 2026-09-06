@@ -171,6 +171,14 @@ write_manifest() {
         "$manifest" > "$next_manifest"
     mv "$next_manifest" "$manifest"
 
+    source_path='artwork/showcase/quota-harbor-storyboard-v1.png'
+    printf 'documentation-storyboard-fixture\n' > "$root/$source_path"
+    source_hash="$(shasum -a 256 "$root/$source_path" | awk '{print $1}')"
+    jq --arg path "$source_path" --arg hash "$source_hash" \
+        '.documentationAssets = [{path: $path, sha256: $hash}]' \
+        "$manifest" > "$next_manifest"
+    mv "$next_manifest" "$manifest"
+
     local icon_file
     local icon_path
     local icon_hash
@@ -204,6 +212,7 @@ make_fixture() {
         "$root/CodexQuotaMonitorUITests" \
         "$root/artwork/provenance" \
         "$root/artwork/source-masters" \
+        "$root/artwork/showcase" \
         "$root/docs/release" \
         "$root/docs/security" \
         "$root/docs/testing" \
@@ -1158,6 +1167,43 @@ expect_rejected_with "$HASH_CASE" \
     'artwork path/hash binding is absent from provenance manifest' \
     "$TEMP_ROOT/hash.log"
 pass 'artwork provenance binds each hash to its declared path'
+
+STORYBOARD_HASH_CASE="$TEMP_ROOT/storyboard-hash-case"
+cp -R "$BASELINE" "$STORYBOARD_HASH_CASE"
+printf 'changed storyboard fixture\n' \
+    > "$STORYBOARD_HASH_CASE/artwork/showcase/quota-harbor-storyboard-v1.png"
+expect_rejected_with "$STORYBOARD_HASH_CASE" \
+    'artwork path/hash binding is absent from provenance manifest' \
+    "$TEMP_ROOT/storyboard-hash.log"
+pass 'documentation storyboard bytes must match their reviewed hash'
+
+STORYBOARD_MISSING_CASE="$TEMP_ROOT/storyboard-missing-case"
+cp -R "$BASELINE" "$STORYBOARD_MISSING_CASE"
+jq 'del(.documentationAssets)' \
+    "$STORYBOARD_MISSING_CASE/artwork/provenance/theme-assets.json" \
+    > "$STORYBOARD_MISSING_CASE/artwork/provenance/theme-assets.next.json"
+mv "$STORYBOARD_MISSING_CASE/artwork/provenance/theme-assets.next.json" \
+    "$STORYBOARD_MISSING_CASE/artwork/provenance/theme-assets.json"
+expect_rejected_with "$STORYBOARD_MISSING_CASE" \
+    'artwork provenance paths must exactly match the reviewed PNG inventory' \
+    "$TEMP_ROOT/storyboard-missing.log"
+pass 'documentation storyboard requires an explicit provenance binding'
+
+EXTRA_DOCUMENTATION_CASE="$TEMP_ROOT/extra-documentation-case"
+cp -R "$BASELINE" "$EXTRA_DOCUMENTATION_CASE"
+extra_documentation_path='artwork/showcase/unreviewed-extra.png'
+printf 'unreviewed documentation fixture\n' > "$EXTRA_DOCUMENTATION_CASE/$extra_documentation_path"
+extra_documentation_hash="$(shasum -a 256 "$EXTRA_DOCUMENTATION_CASE/$extra_documentation_path" | awk '{print $1}')"
+jq --arg path "$extra_documentation_path" --arg hash "$extra_documentation_hash" \
+    '.documentationAssets += [{path: $path, sha256: $hash}]' \
+    "$EXTRA_DOCUMENTATION_CASE/artwork/provenance/theme-assets.json" \
+    > "$EXTRA_DOCUMENTATION_CASE/artwork/provenance/theme-assets.next.json"
+mv "$EXTRA_DOCUMENTATION_CASE/artwork/provenance/theme-assets.next.json" \
+    "$EXTRA_DOCUMENTATION_CASE/artwork/provenance/theme-assets.json"
+expect_rejected_with "$EXTRA_DOCUMENTATION_CASE" \
+    'artwork provenance paths must exactly match the reviewed PNG inventory' \
+    "$TEMP_ROOT/extra-documentation.log"
+pass 'an unreviewed documentation PNG cannot be approved by its manifest entry'
 
 EXTRA_PNG_CASE="$TEMP_ROOT/extra-png-case"
 cp -R "$BASELINE" "$EXTRA_PNG_CASE"

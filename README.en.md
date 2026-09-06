@@ -2,11 +2,52 @@
 
 > An unofficial community project. It is not affiliated with, sponsored by, certified by, or endorsed by OpenAI, Anthropic, or Apple. Product names and trademarks belong to their respective owners.
 
-QuotaHarbor is a native macOS menu-bar utility. Codex is fixed and always enabled; Claude Code is an optional display source. The menu bar and retained floating card show only connection and quota fields supplied by reviewed local provider interfaces. They never sign users in or out, edit usage, or turn missing data into zero. After enabling Claude, the user may separately confirm installation of a local `statusLine` relay; hiding Claude never modifies or removes that relay automatically.
+QuotaHarbor is a simple, easy-to-use quota viewer that helps you keep the information you need close at hand. As an unofficial project, we focus on clarity, intuitive controls, and a look that fits naturally into your desktop.
+
+Choose from a variety of built-in themes to match your mood or desktop style, or customize the appearance to make it your own. We hope QuotaHarbor can be more than a useful little tool—a small personal touch for your everyday workspace.
+
+This is our first app, and there is still plenty of room to grow. We would love to hear your feedback, suggestions, or any problems you run into. Your input will help us make it better, one step at a time. Thank you for giving it a try—we hope you enjoy it!
 
 [繁體中文 README](README.md)
 
+## 六款內建主題 / Six built-in themes
+
+以下為專案現有的主題背景素材，不是程式操作截圖。選一款喜歡的風格，讓小工具更貼近你的桌面。
+
+These are the project's existing theme background artworks, not app screenshots. Pick a look that feels at home on your desktop.
+
+| 莫蘭迪 / Morandi | 賽博龐克 / Cyberpunk | 溫暖手繪風 / Warm Hand-drawn |
+| --- | --- | --- |
+| ![莫蘭迪主題背景 / Morandi theme artwork](CodexQuotaMonitor/Resources/ThemeArtwork/theme-morandi-background.png) | ![賽博龐克主題背景 / Cyberpunk theme artwork](CodexQuotaMonitor/Resources/ThemeArtwork/theme-cyberpunk-background.png) | ![溫暖手繪風主題背景 / Warm Hand-drawn theme artwork](CodexQuotaMonitor/Resources/ThemeArtwork/theme-warm-hand-drawn-background.png) |
+
+| 玻璃 / Glass | 素描 / Sketch | 卡通插畫 / Cartoon Illustration |
+| --- | --- | --- |
+| ![玻璃主題背景 / Glass theme artwork](CodexQuotaMonitor/Resources/ThemeArtwork/theme-glass-background.png) | ![素描主題背景 / Sketch theme artwork](CodexQuotaMonitor/Resources/ThemeArtwork/theme-sketch-background.png) | ![卡通插畫主題背景 / Cartoon Illustration theme artwork](CodexQuotaMonitor/Resources/ThemeArtwork/theme-cartoon-illustration-background.png) |
+
+## 主題展示分鏡 / Theme showcase storyboard
+
+使用上述六款主題製作的概念展示分鏡，呈現「查看資訊 → 挑選主題 → 配合心情 → 自訂風格 → 融入桌面 → 分享回饋」的介紹順序。圖中的卡片、色票與桌面輪廓僅供示意，不代表實際介面、操作步驟或真實額度資料。
+
+A concept storyboard built around the six themes above, introducing the experience of checking information, choosing a theme, matching your mood, personalizing the look, fitting it into your desktop, and sharing feedback. The cards, swatches, and desktop outlines are illustrative—not actual app screens, instructions, or real quota data.
+
+![QuotaHarbor 六款主題展示概念分鏡，非實際程式截圖 / Six-theme concept storyboard, not app screenshots](artwork/showcase/quota-harbor-storyboard-v1.png)
+
+| 分鏡 / Frame | 展示重點 / Scene |
+| --- | --- |
+| 01 · Morandi | 一眼查看資訊 / Check at a glance |
+| 02 · Cyberpunk | 挑選主題 / Choose a theme |
+| 03 · Warm Hand-drawn | 配合心情 / Match your mood |
+| 04 · Glass | 自訂個人風格 / Make it your own |
+| 05 · Sketch | 融入桌面 / Fit your desktop |
+| 06 · Cartoon | 分享使用回饋 / Share your feedback |
+
+素材說明：六款主題背景為專案既有的 AI 生成素材；「手繪風」與「素描」描述視覺風格，不代表人工繪製。展示分鏡以這些素材為參考，使用 AI 生成，不是實際程式截圖。
+
+Artwork note: The six theme backgrounds are existing AI-generated project assets. “Hand-drawn” and “Sketch” describe their visual styles, not how they were made. The storyboard is AI-generated using those artworks as references; it is not a set of app screenshots.
+
 ## Highlights
+
+QuotaHarbor is a native macOS menu-bar utility. Codex is fixed and always enabled; Claude Code is an optional display source. The menu bar and retained floating card show only connection and quota fields supplied by reviewed local provider interfaces. They never sign users in or out, edit usage, or turn missing data into zero. After enabling Claude, the user may separately confirm installation of a local `statusLine` relay; hiding Claude never modifies or removes that relay automatically.
 
 - Settings and onboarding keep Codex always enabled and offer an optional Claude Code display toggle. Google Antigravity and Kimi Code are not selectable. Codex retains its dedicated automatic/manual quota-window controls.
 - Existing schema-v3 settings remain readable. Every load and write guarantees Codex, preserves an explicitly enabled Claude source, and removes unsupported Google/Kimi state and preferences.

@@ -132,6 +132,20 @@
     ],
     "delivery": "Unmasked square flattened artwork in a macOS AppIcon asset catalog for macOS 14+ compatibility; the system applies the final icon shape."
   },
+  "documentationAssets": [
+    {
+      "path": "artwork/showcase/quota-harbor-storyboard-v1.png",
+      "sha256": "65b81403ea053daedfa8066286f148d7a9dd20f7bcfa1ccfc11e8f710f27a65e",
+      "generatedAt": "2026-09-06",
+      "generator": "OpenAI Codex built-in image generation",
+      "format": "PNG",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "referenceThemeIDs": ["morandi", "cyberpunk", "warm-hand-drawn", "glass", "sketch", "cartoon-illustration"],
+      "purpose": "Owner-approved six-panel concept storyboard for the bilingual introduction; not app screenshots or evidence of product behavior.",
+      "provenance": "Generated in two passes using the six existing runtime theme artworks as references. Available generation provenance metadata is retained. No real account or quota data was supplied."
+    }
+  ],
   "review": {
     "mechanical": "passed: all six runtime images are distinct, decodable single-frame 1254x1254 sRGB PNG files; deterministic re-encode verified",
     "visual": "passed: project-owner selection and independent AI visual review found no people, faces, characters, text, logos, watermarks or recognizable third-party IP; automated theme tests enforce the declared text and icon contrast rules, and no standalone exact pixel-ratio claim is made",
