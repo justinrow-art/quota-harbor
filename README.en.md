@@ -1,5 +1,7 @@
 # QuotaHarbor
 
+[English](README.en.md) ｜ [繁體中文](README.md)
+
 > An unofficial community project. It is not affiliated with, sponsored by, certified by, or endorsed by OpenAI, Anthropic, or Apple. Product names and trademarks belong to their respective owners.
 
 QuotaHarbor is a simple, easy-to-use quota viewer that helps you keep the information you need close at hand. As an unofficial project, we focus on clarity, intuitive controls, and a look that fits naturally into your desktop.
@@ -7,8 +9,6 @@ QuotaHarbor is a simple, easy-to-use quota viewer that helps you keep the inform
 Choose from a variety of built-in themes to match your mood or desktop style, or customize the appearance to make it your own. We hope QuotaHarbor can be more than a useful little tool—a small personal touch for your everyday workspace.
 
 This is our first app, and there is still plenty of room to grow. We would love to hear your feedback, suggestions, or any problems you run into. Your input will help us make it better, one step at a time. Thank you for giving it a try—we hope you enjoy it!
-
-[繁體中文 README](README.md)
 
 ## 六款內建主題 / Six built-in themes
 

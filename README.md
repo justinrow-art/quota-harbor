@@ -1,5 +1,7 @@
 # QuotaHarbor
 
+[English](README.en.md) ｜ [繁體中文](README.md)
+
 > 非官方社群專案，與 OpenAI、Anthropic 或 Apple 無隸屬、合作、認證或背書關係。產品名稱與商標均屬各自權利人所有。
 
 QuotaHarbor 是一款簡單、方便的額度檢視工具，希望讓你在日常使用時，能輕鬆掌握需要的資訊。作為非官方作品，我們將重點放在清楚易讀、操作直覺，以及能融入桌面風格的使用體驗。
@@ -9,8 +11,6 @@ QuotaHarbor 是一款簡單、方便的額度檢視工具，希望讓你在日�
 這是我們的第一款作品，還有許多值得打磨的地方。歡迎分享使用心得、提出建議，或告訴我們遇到的問題，幫助它一步步變得更好。謝謝你願意試用，也希望你會喜歡！
 
 ![App icon](CodexQuotaMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon_256x256.png)
-
-[English README](README.en.md)
 
 ## 六款內建主題 / Six built-in themes
 
